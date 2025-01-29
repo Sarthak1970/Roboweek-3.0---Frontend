@@ -33,8 +33,6 @@ const images = [
   { src: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738133465/image28_nuzo0o.jpg", alt: "Campus Overview" },
   { src: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738133463/image29_yncflv.jpg", alt: "Campus Overview" },
   { src: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738133462/image31_lsuqra.jpg", alt: "Campus Overview" },
-  { src: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738133463/image29_yncflv.jpg", alt: "Campus Overview" },
-  { src: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738133462/image31_lsuqra.jpg", alt: "Campus Overview" },
 ];
 
 const AUTO_SCROLL_DELAY = 3000; // 3 seconds
