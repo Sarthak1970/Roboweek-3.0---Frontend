@@ -2,10 +2,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
-import pathfinder from '../assets/pathfinder.png';
-import bowlBotDerby from '../assets/BowlBotDerby.png';
-import mechaMayhem from '../assets/MECHA MAYHEM (1).png';
-import spectrumSprint from '../assets/2.png';
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -26,7 +22,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/pathfinder",
-      image: pathfinder, 
+      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154215/pathfinder_dec5zk.png', 
     },
     {
       title: "Bowl Bot Derby",
@@ -41,7 +37,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/competition3",
-      image: bowlBotDerby, 
+      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154212/BowlBotDerby_zhwklt.png', 
     },
     {
       title: "MECHA MAYHEM",
@@ -56,7 +52,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/competition3",
-      image: mechaMayhem,
+      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154205/MECHA_MAYHEM_1_hevnpv.png',
     },
     {
       title: "SPECTRUM SPRINT",
@@ -71,7 +67,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/competition3",
-      image: spectrumSprint, 
+      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
       title: "✨ Workshop to be revealed",
