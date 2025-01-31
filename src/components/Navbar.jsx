@@ -1,50 +1,51 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
 import { Link, useNavigate } from 'react-router-dom';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Button from './Button';
-import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/');
-  };
-
   const navigation = [
-    { name: 'Home', href: '/', icon: 'ri-home-line' },
+    { name: 'Home', section:'hero', href: '/', icon: 'ri-home-line' },
     { name: 'About', href: '/about', icon: 'ri-information-line' },
     { name: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
     { name: 'Team', href: '/team', icon: 'ri-team-line' },
     { name: 'Sponsors', href: '/sponsors', icon: 'ri-money-dollar-circle-line' },
     { name: 'Conference', href: '/conference', icon: 'ri-slideshow-line' },
-    { name: 'Contact', href: '#contact', icon: 'ri-mail-line' }, // Linked Contact button to contact section
+    { name: 'Contact', href: '#contact', icon: 'ri-mail-line' },
   ];
+
+  // This function scrolls to the contact section  
 
   const handleScrollToContact = (event) => {
     event.preventDefault();
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); 
+    } else {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  };
+
+  // When You click on the Links it Takes you to the top of the page 
+
+  const handleNavigation = (href, event) => {
+    event.preventDefault();
+    navigate(href);
+    window.scrollTo(0, 0);
   };
 
   return (
     <>
-      {/* {user && (
-        <div className="fixed top-6 right-6 z-50">
-          <div className="backdrop-blur-lg bg-black/20 border border-pink-500/30 rounded-xl px-6 py-3">
-            <span className="text-pink-400 font-semibold">
-              <i className="ri-user-line mr-2"></i>
-              {user.name}
-            </span>
-          </div>
-        </div>
-      )} */}
-
       <nav
         className={`hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-[1000] ${isOpen ? 'w-64' : 'w-12'} transition-all duration-500 ease-in-out hover:shadow-lg hover:shadow-pink-500/10`}
         onMouseEnter={() => setIsOpen(true)}
@@ -66,7 +67,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.name === 'Contact' ? '#' : item.href}
-                onClick={item.name === 'Contact' ? handleScrollToContact : undefined}
+                onClick={(e) => item.name === 'Contact' ? handleScrollToContact(e) : handleNavigation(item.href, e)}
                 style={{
                   transitionDelay: `${index * 50}ms`
                 }}
@@ -94,9 +95,14 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className="z-[1000] md:hidden fixed backdrop-blur-[5px] bottom-0 left-0 right-0 bg-black/20 border-t border-pink-500/30 p-4 flex justify-around z-50">
+      <div className="z-[1000] md:hidden fixed backdrop-blur-[5px] bottom-0 left-0 right-0 bg-black/20 border-t border-pink-500/30 p-4 flex justify-around">
         {navigation.map((item) => (
-          <Link key={item.name} to={item.name === 'Contact' ? '#' : item.href} onClick={item.name === 'Contact' ? handleScrollToContact : undefined} className="flex flex-col items-center text-gray-300 hover:text-pink-400 transition-colors duration-300">
+          <Link
+            key={item.name}
+            to={item.name === 'Contact' ? '#' : item.href}
+            onClick={(e) => item.name === 'Contact' ? handleScrollToContact(e) : navigate(item.href, e)}
+            className="flex flex-col items-center text-gray-300 hover:text-pink-400 transition-colors duration-300"
+          >
             <i className={`${item.icon} text-2xl`}></i>
             <span className="text-sm">{item.name}</span>
           </Link>

@@ -7,6 +7,22 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [result, setResult] = useState('');
+  const [formErrors, setFormErrors] = useState({
+    name: false,
+    email: false,
+    message: false
+  });
+
+  const validateForm = () => {
+    const errors = {
+      name: formData.name.trim() === '',
+      email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email),
+      message: formData.message.trim() === ''
+    };
+    setFormErrors(errors);
+    return !Object.values(errors).some(error => error);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,12 +30,50 @@ const Contact = () => {
       ...prevState,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (formErrors[name]) {
+      setFormErrors(prev => ({...prev, [name]: false}));
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you would typically handle form submission
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    
+    if (!validateForm()) {
+      setResult("Please fill all fields correctly");
+      return;
+    }
+
+    setResult("Sending....");
+    
+    const submissionData = new FormData();
+    submissionData.append("name", formData.name);
+    submissionData.append("email", formData.email);
+    submissionData.append("message", formData.message);
+    submissionData.append("access_key", "2b10728c-e9bc-474b-bc8d-6a7734d9127b");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: submissionData
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.log("Error", error);
+      setResult("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -30,17 +84,17 @@ const Contact = () => {
           <div className="p-8 border-r border-pink-500/50">
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Chat to us</h3>
+                <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Chat with us</h3>
                 <p className="text-gray-300 mt-2">Our robot team is ready to assist.</p>
                 <a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
                 robonith@nith.ac.in
                 </a><a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                  +91 8957895881
+                  Milind Gupta : +91 8957895881
                 </a><a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                <h3>For General Queries : <a href="mailto:robonith@nith.ac.in" className=" underline text-white hover:text-pink-300 mt-1 block">
-                +91 9031909034
-                </a></h3><a href="mailto:robonith@nith.ac.in" className="inline underline text-white hover:text-pink-300 mt-1 block">
-                +91 8299284936
+                <h3>For General Queries : <a href="mailto:robonith@nith.ac.in" className="  text-white hover:text-pink-300 mt-1 block">
+                Purushottam Singh : +91 9031909034
+                </a></h3><a href="mailto:robonith@nith.ac.in" className="  text-white hover:text-pink-300 mt-1 block">
+                Utkarsh Agrawaal : +91 8299284936
                 </a>
                 </a>
               </div>
@@ -60,19 +114,16 @@ const Contact = () => {
 
               {/* Social Media Links */}
               <div className="flex justify-center space-x-4 pt-8">
-                <a href="https://github.com/robosocnith" className="text-pink-400 hover:text-pink-300">
+                <a href="https://github.com/robosocnith" className="text-pink-400 hover:text-pink-300 transform transition-all duration-300 hover:rotate-[360deg] hover:scale-150">
                   <i className="ri-github-fill text-3xl"></i>
                 </a>
-                <a href="https://www.facebook.com/robo.soc.nith/" className="text-pink-400 hover:text-pink-300">
+                <a href="https://www.facebook.com/robo.soc.nith/" className="text-pink-400 hover:text-pink-300 transform transition-all duration-300 hover:rotate-[360deg] hover:scale-150">
                   <i className="ri-facebook-line text-3xl"></i>
                 </a>
-                {/* <a href="#" className="text-pink-400 hover:text-pink-300">
-                  <i className="ri-twitter-x-line text-3xl"></i>
-                </a> */}
-                <a href="https://www.instagram.com/robosocnith/?hl=en" className="text-pink-400 hover:text-pink-300">
+                <a href="https://www.instagram.com/robosocnith/?hl=en" className="text-pink-400 hover:text-pink-300 transform transition-all duration-300 hover:rotate-[360deg] hover:scale-150">
                   <i className="ri-instagram-line text-3xl"></i>
                 </a>
-                <a href="https://www.youtube.com/@roboticssocietynith8888/" className="text-pink-400 hover:text-pink-300">
+                <a href="https://www.youtube.com/@roboticssocietynith8888/" className="text-pink-400 hover:text-pink-300 transform transition-all duration-300 hover:rotate-[360deg] hover:scale-150">
                   <i className="ri-youtube-line text-3xl"></i>
                 </a>
               </div>
@@ -83,10 +134,6 @@ const Contact = () => {
           <div className="p-8">
             <div className="max-w-md">
               <h2 className="text-3xl font-extrabold text-pink-400 font-squidFont">Contact Us </h2>
-              {/* <p className="mt-2 text-gray-300">
-                Tell us about your interest in AI and robotics. Let's build the future together.
-              </p> */}
-
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
                 <div className="space-y-4">
                   <div>
@@ -98,10 +145,13 @@ const Contact = () => {
                       name="name"
                       id="name"
                       required
-                      className="text-white mt-1 block w-full px-3 py-2 border-b border-pink-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent"
+                      className={`text-white mt-1 block w-full px-3 py-2 border-b ${
+                        formErrors.name ? 'border-red-500' : 'border-pink-500'
+                      } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.name}
                       onChange={handleChange}
                     />
+                    {formErrors.name && <p className="text-red-500 text-sm mt-1">Name is required</p>}
                   </div>
 
                   <div>
@@ -113,10 +163,13 @@ const Contact = () => {
                       name="email"
                       id="email"
                       required
-                      className="text-white mt-1 block w-full px-3 py-2 border-b border-pink-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent"
+                      className={`text-white mt-1 block w-full px-3 py-2 border-b ${
+                        formErrors.email ? 'border-red-500' : 'border-pink-500'
+                      } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.email}
                       onChange={handleChange}
                     />
+                    {formErrors.email && <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>}
                   </div>
 
                   <div>
@@ -128,12 +181,13 @@ const Contact = () => {
                       id="message"
                       rows="4"
                       required
-                      className="text-white mt-1 block w-full px-3 py-2 border-b border-pink-500 focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent"
+                      className={`text-white mt-1 block w-full px-3 py-2 border-b ${
+                        formErrors.message ? 'border-red-500' : 'border-pink-500'
+                      } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.message}
                       onChange={handleChange}
                     />
                   </div>
-
                 </div>
 
                 <div className="flex justify-center">
@@ -143,6 +197,7 @@ const Contact = () => {
                     textSize="text-sm"
                   />
                 </div>
+                {result && <p className="text-center text-pink-400 mt-4">{result}</p>}
               </form>
             </div>
           </div>

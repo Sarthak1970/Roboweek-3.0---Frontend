@@ -49,11 +49,9 @@ const ConferencePage = () => {
               key={index}
               className="bg-black/70 backdrop-blur-lg border border-gray-600 rounded-xl p-4 md:p-6 text-center transition-transform duration-300 hover:scale-105"
             >
-              <img
-                src={speaker.image}
-                alt={speaker.name}
-                className="w-full h-40 md:h-48 object-cover rounded-lg mb-4"
-              />
+              <div className="w-full h-40 md:h-48 flex items-center justify-center rounded-lg mb-4 bg-pink-400/10 border border-pink-400/30">
+                <i className="ri-user-3-line text-6xl text-pink-400/50"></i>
+              </div>
               <h2 className="text-lg md:text-xl font-bold text-white">{speaker.name}</h2>
               <p className="text-sm md:text-base text-gray-400 mt-2 font-semibold">
                 Details coming soon.
