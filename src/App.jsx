@@ -13,6 +13,7 @@ import ConferencePage from './pages/ConferencePage';
 import Signup from './components/SignUp';
 import Profile from './components/Profile';
 // import SplashCursor from './SplashCursor'
+import Contact from './components/Contact.jsx';
 import SplashCursor from './blocks/Animations/SplashCursor/SplashCursor.jsx'
 
 
@@ -54,6 +55,7 @@ function App() {
                 } 
               />
               <Route path="/conference" element={<ConferencePage />} />
+              <Route path="/Contact" element={<Contact/>}/>
             </Routes>
           </main>
           <Footer />

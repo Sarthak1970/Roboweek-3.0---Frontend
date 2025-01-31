@@ -7,7 +7,7 @@ import Sponsors from './Sponsors';
 // import Conference from '../components/Conference';
 // import logo from '../assets/Heading.png';
 import Prizes from '../components/Prizes';
-import Contact from '../components/contact'
+import Contact from '../components/Contact'
 import logo from '../assets/logoRoboweek.png';
 
 const Home = () => {
