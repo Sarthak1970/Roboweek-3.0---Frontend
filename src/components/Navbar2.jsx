@@ -6,6 +6,7 @@ import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const navigation = [
@@ -34,6 +35,7 @@ const Navbar = () => {
 
   return (
     <>
+      {/* Desktop Navigation */}
       <nav
         className={`hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-[1000] ${isOpen ? 'w-64' : 'w-12'} transition-all duration-500 ease-in-out hover:shadow-lg hover:shadow-pink-500/10`}
         onMouseEnter={() => setIsOpen(true)}
@@ -83,18 +85,41 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className="z-[1000] md:hidden fixed backdrop-blur-[5px] bottom-0 left-0 right-0 bg-black/20 border-t border-pink-500/30 p-4 flex justify-around z-50">
-        {navigation.map((item) => (
-          <Link
-            key={item.name}
-            to={item.name === 'Contact' ? '#' : item.href}
-            onClick={(e) => item.name === 'Contact' ? handleScrollToContact(e) : handleNavigation(item.href, e)}
-            className="flex flex-col items-center text-gray-300 hover:text-pink-400 transition-colors duration-300"
-          >
-            <i className={`${item.icon} text-2xl`}></i>
-            <span className="text-sm">{item.name}</span>
-          </Link>
-        ))}
+      {/* Mobile Navigation */}
+      <div className="md:hidden">
+        {/* Hamburger Button */}
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="fixed top-4 right-4 z-[1001] p-2 rounded-lg bg-black/20 backdrop-blur-lg border border-pink-500/30"
+        >
+          {isMobileMenuOpen ? (
+            <XMarkIcon className="h-6 w-6 text-gray-300" />
+          ) : (
+            <Bars3Icon className="h-6 w-6 text-gray-300" />
+          )}
+        </button>
+
+        {/* Mobile Menu */}
+        <div className={`fixed inset-0 z-[1000] bg-black/90 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}>
+          <div className="flex flex-col items-center justify-center h-full gap-6 p-4">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.name === 'Contact' ? '#' : item.href}
+                onClick={(e) => {
+                  item.name === 'Contact' ? handleScrollToContact(e) : handleNavigation(item.href, e);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="flex items-center gap-3 text-gray-300 hover:text-pink-400 transition-colors duration-300"
+              >
+                <i className={`${item.icon} text-2xl`}></i>
+                <span className="text-xl font-medium">{item.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
