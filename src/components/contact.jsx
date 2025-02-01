@@ -132,7 +132,7 @@ const Contact = () => {
 
           {/* Right Column - Contact Form */}
           <div className="p-8">
-            <div className="max-w-md">
+            <div className="max-w-md mx-auto text-center">
               <h2 className="text-3xl font-extrabold text-pink-400 font-squidFont">Contact Us </h2>
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
                 <div className="space-y-4">
@@ -145,7 +145,7 @@ const Contact = () => {
                       name="name"
                       id="name"
                       required
-                      className={`text-white mt-1 block w-full px-3 py-2 border-b ${
+                      className={`text-center text-white mt-1 block w-full px-3 py-2 border-b ${
                         formErrors.name ? 'border-red-500' : 'border-pink-500'
                       } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.name}
@@ -163,7 +163,7 @@ const Contact = () => {
                       name="email"
                       id="email"
                       required
-                      className={`text-white mt-1 block w-full px-3 py-2 border-b ${
+                      className={`text-center text-white mt-1 block w-full px-3 py-2 border-b ${
                         formErrors.email ? 'border-red-500' : 'border-pink-500'
                       } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.email}
@@ -181,7 +181,7 @@ const Contact = () => {
                       id="message"
                       rows="4"
                       required
-                      className={`text-white mt-1 block w-full px-3 py-2 border-b ${
+                      className={`text-center text-white mt-1 block w-full px-3 py-2 border-b ${
                         formErrors.message ? 'border-red-500' : 'border-pink-500'
                       } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.message}
