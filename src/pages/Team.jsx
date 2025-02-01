@@ -32,7 +32,7 @@ const Team = () => {
                   <img
                     src={member.ProfilePicture}
                     alt={member.Name}
-                    className="w-full h-3/4 object-cover  p-5 object-center"
+                    className="w-full h-3/4 object-contain rounded-2xl  p-5 object-center"
                   />
                   <div className="p-4 text-center">
                     <h3 className="text-xl font-bold text-white mb-2">{member.Name.toUpperCase()}</h3>

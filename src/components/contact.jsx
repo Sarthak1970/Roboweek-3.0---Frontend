@@ -50,7 +50,7 @@ const Contact = () => {
     submissionData.append("name", formData.name);
     submissionData.append("email", formData.email);
     submissionData.append("message", formData.message);
-    submissionData.append("access_key", "2b10728c-e9bc-474b-bc8d-6a7734d9127b");
+    submissionData.append("access_key", "cf916255-9865-4e82-af49-e058d0353c02");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
