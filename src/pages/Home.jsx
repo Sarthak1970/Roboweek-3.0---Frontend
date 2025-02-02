@@ -140,7 +140,7 @@ const Home = () => {
 </section>
 
 
-      <Prizes />
+      {/* <Prizes /> */}
 
       <Sponsors />
     <Contact />

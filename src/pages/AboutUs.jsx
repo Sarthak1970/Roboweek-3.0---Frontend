@@ -75,7 +75,7 @@ const About = () => {
           <h2 className="text-3xl font-bold text-pink-400 mb-6 text-center font-squidFont">Our Impact</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { number: "3800+", label: "Participants" },
+              { number: "4000+", label: "Participants" },
               { number: "100+", label: "Projects Completed" },
               { number: "200+", label: "Partner Organizations" }
             ].map((stat, index) => (

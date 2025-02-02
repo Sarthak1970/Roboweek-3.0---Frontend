@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const navigation = [
-    { name: 'Home', section:'hero', href: '/', icon: 'ri-home-line' },
+    { name: 'Home', section:'hero', href: '/Home', icon: 'ri-home-line' },
     { name: 'About', href: '/about', icon: 'ri-information-line' },
     { name: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
     { name: 'Team', href: '/team', icon: 'ri-team-line' },
@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const handleScrollToContact = (event) => {
     event.preventDefault();
-    if (window.location.pathname !== '/') {
+    if (window.location.pathname !== '/Home') {
       navigate('/');
       setTimeout(() => {
         const contactSection = document.getElementById('contact');
