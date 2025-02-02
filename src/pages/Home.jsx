@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
-import { Link } from 'react-router-dom';
 import CountdownTimer from '../components/Timer';
 import About from './AboutUs';
 import Sponsors from './Sponsors';
@@ -29,11 +28,11 @@ const Home = () => {
           <h2 className='font-squidFont text-white text-2xl lg:text-3xl'>MYRAID OF iNNOVATION</h2>
 
             <CountdownTimer />
-          </div>
-          <div className='mt-5'>
-            <Link to="/sign">
-          <Button text="Register Now" textSize="text-2xl" iconLink={<i className="ri-arrow-right-line"></i>} />
-            </Link>
+            <Button 
+              text="Register Now"
+              textSize="text-2xl"
+              iconLink={<i className="ri-arrow-right-line"></i>}
+            />
           </div>
         </section>
 </div>

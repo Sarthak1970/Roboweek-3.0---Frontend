@@ -34,14 +34,16 @@ const Navbar = () => {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    setIsOpen(false); 
   };
 
-  // When You click on the Links it Takes you to the top of the page 
+ 
 
   const handleNavigation = (href, event) => {
     event.preventDefault();
     navigate(href);
     window.scrollTo(0, 0);
+    setIsOpen(false); 
   };
 
   return (
@@ -95,18 +97,42 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <div className="z-[1000] md:hidden fixed backdrop-blur-[5px] bottom-0 left-0 right-0 bg-black/20 border-t border-pink-500/30 p-4 flex justify-around">
-        {navigation.map((item) => (
-          <Link
-            key={item.name}
-            to={item.name === 'Contact' ? '#' : item.href}
-            onClick={(e) => item.name === 'Contact' ? handleScrollToContact(e) : navigate(item.href, e)}
-            className="flex flex-col items-center text-gray-300 hover:text-pink-400 transition-colors duration-300"
-          >
-            <i className={`${item.icon} text-2xl`}></i>
-            <span className="text-sm">{item.name}</span>
-          </Link>
-        ))}
+      <div className="md:hidden fixed top-4 right-4 z-[1000]">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-2 rounded-lg bg-black/20 backdrop-blur-lg border border-pink-500/30"
+        >
+          {isOpen ? (
+            <XMarkIcon className="h-6 w-6 text-pink-400" />
+          ) : (
+            <Bars3Icon className="h-6 w-6 text-pink-400" />
+          )}
+        </button>
+
+        {isOpen && (
+          <div className="fixed inset-0 bg-black/95 backdrop-blur-lg z-[999]">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 p-2 rounded-lg bg-black/20 backdrop-blur-lg border border-pink-500/30 hover:bg-pink-500/10"
+            >
+              <XMarkIcon className="h-6 w-6 text-pink-400" />
+            </button>
+
+            <div className="flex flex-col items-center justify-center h-full space-y-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.name === 'Contact' ? '#' : item.href}
+                  onClick={(e) => item.name === 'Contact' ? handleScrollToContact(e) : handleNavigation(item.href, e)}
+                  className="flex items-center space-x-4 text-gray-300 hover:text-pink-400 transition-colors duration-300"
+                >
+                  <i className={`${item.icon} text-2xl`}></i>
+                  <span className="text-xl font-medium">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
