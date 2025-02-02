@@ -28,6 +28,9 @@ const Home = () => {
           <h2 className='font-squidFont text-white text-2xl lg:text-3xl'>MYRAID OF iNNOVATION</h2>
 
             <CountdownTimer />
+            <div className="mt-5">
+              
+            </div>
             <Button 
               text="Register Now"
               textSize="text-2xl"
