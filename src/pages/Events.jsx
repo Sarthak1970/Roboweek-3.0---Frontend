@@ -102,7 +102,7 @@ const Events = () => {
       rulebookLink: null
     },
     {
-      title: "✨ Talk to be revealed",
+      title: "✨ To be revealed",
       type: "talk",
       date: "To be revealed",
       description: "Get ready for an inspiring talk! Details coming soon.",
@@ -118,7 +118,7 @@ const Events = () => {
       rulebookLink: null
     },
     {
-      title: "✨ Talk to be revealed",
+      title: "✨To be revealed",
       type: "talk",
       date: "To be revealed",
       description: "An exciting speaker will be announced soon. Stay tuned!",
@@ -139,7 +139,7 @@ const Events = () => {
     { id: 'all', label: 'All Events' },
     { id: 'competition', label: 'Competitions' },
     { id: 'workshop', label: 'Workshops' },
-    { id: 'talk', label: 'Talks' },
+    { id: 'talk', label: 'Hackathons' },
   ];
 
   const filteredEvents = selectedCategory === 'all'
