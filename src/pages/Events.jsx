@@ -6,7 +6,7 @@ import Button from '../components/Button';
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const { user } = useAuth();
+  const { user } = useAuth() || {};
 
   const events = [
     {
@@ -103,9 +103,9 @@ const Events = () => {
     },
     {
       title: "✨ To be revealed",
-      type: "talk",
+      type: "Hackathon",
       date: "To be revealed",
-      description: "Get ready for an inspiring talk! Details coming soon.",
+      description: "Get ready for an inspiring Hackathon! Details coming soon.",
       categories: ["Coming Soon"],
       details: {
         venue: "NIT Hamirpur",
@@ -119,7 +119,7 @@ const Events = () => {
     },
     {
       title: "✨To be revealed",
-      type: "talk",
+      type: "Hackathon",
       date: "To be revealed",
       description: "An exciting speaker will be announced soon. Stay tuned!",
       categories: ["Coming Soon"],
@@ -139,7 +139,7 @@ const Events = () => {
     { id: 'all', label: 'All Events' },
     { id: 'competition', label: 'Competitions' },
     { id: 'workshop', label: 'Workshops' },
-    { id: 'talk', label: 'Hackathons' },
+    { id: 'Hackathon', label: 'Hackathons' },
   ];
 
   const filteredEvents = selectedCategory === 'all'
