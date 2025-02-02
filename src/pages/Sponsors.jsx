@@ -1,33 +1,57 @@
-import { motion } from 'framer-motion';
-import Button from '../components/Button';
+import { motion } from "framer-motion";
+import Button from "../components/Button";
 
 const Sponsors = () => {
   const sponsorTiers = [
     {
-      tier: "Platinum Sponsors",
+      tier: "Title Partner",
       sponsors: [
-        { name: "TechCorp", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" },
-        { name: "RoboTech", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" }
-      ]
+        {
+          name: "hoverRobotix",
+          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514987/hoverrobo_aw0c7w.png",
+        },
+      ],
     },
     {
-      tier: "Gold Sponsors",
+      tier: "Mentoring Partner",
       sponsors: [
-        { name: "InnovateLabs", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" },
-        { name: "FutureTech", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" },
-        { name: "AI Systems", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" }
-      ]
+        {
+          name: "MentorX",
+          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514643/MENTORx_Logo_png_qmoqlm.png",
+        },
+      ],
     },
     {
-      tier: "Silver Sponsors",
+      tier: "Co-Title Sponsors",
       sponsors: [
-        { name: "RoboWorks", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" },
-        { name: "TechStart", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" },
-        { name: "NextGen", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" },
-        { name: "BuildBot", logo: "https://bostondynamics.com/wp-content/uploads/2023/03/Logo-v2.svg" }
-      ]
-    }
+        {
+          name: "RevUp",
+          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514640/RevUp_Logo_png_clean1_urkv9w.png",
+        },
+        {
+          name: "LUCR8",
+          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514639/Lucr8_Ventures_Logo_png_jgz8s3.jpg",
+        },
+      ],
+    },
+    {
+      tier: "Powered By",
+      sponsors: [
+        {
+          name: "unstop",
+          logo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/svg/unstop-logo.svg",
+        },
+      ],
+    },
   ];
+
+  const handleSponsorClick = () => {
+    window.open(
+      "https://mail.google.com/mail/?view=cm&fs=1&to=robonith@nith.ac.in&cc=22bme080@nith.ac.in&bcc=avisheetsrivastava@gmail.com&su=Roboweek%203.0%20Sponsorship%20Inquiry&body=Hello,%0A%0AI%20am%20interested%20in%20becoming%20a%20sponsor%20for%20Roboweek%203.0.%0A%0APlease%20let%20me%20know%20the%20details.%0A%0AThank%20you.",
+      "_blank"
+    );
+  };
+  
 
   return (
     <div className="min-h-screen py-20">
@@ -57,22 +81,41 @@ const Sponsors = () => {
           >
             <div className="flex items-center justify-center mb-8">
               <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
-              <h2 className="text-2xl font-bold text-white px-4 font-squidFont">{tier.tier}</h2>
+              <h2 className="text-2xl font-bold text-white px-4 font-squidFont">
+                {tier.tier}
+              </h2>
               <div className="h-[1px] flex-grow bg-gradient-to-r from-transparent via-pink-500 to-transparent"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div
+              className={`grid ${tier.sponsors.length === 1 ? 'grid-cols-1' : 
+                tier.sponsors.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 
+                'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'} gap-8 justify-items-center`}
+            >
               {tier.sponsors.map((sponsor, index) => (
                 <motion.div
                   key={index}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
                   whileHover={{
                     scale: 1.03,
-                    boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)"
+                    boxShadow: "0 0 20px rgba(6, 182, 212, 0.3)",
                   }}
-                  className="backdrop-blur-lg bg-black/30 group relative overflow-hidden rounded-xl p-4 border border-pink-500/20 h-36 flex items-center justify-center"
+                  className="backdrop-blur-lg bg-black/30 group relative overflow-hidden rounded-xl p-4 border border-pink-500/20 h-36 w-full max-w-md flex items-center justify-center"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <p className="text-gray-300 text-center">Will be revealed soon <br />stay tuned!</p>
+
+                  {sponsor.logo && (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <img
+                        src={sponsor.logo}
+                        alt={sponsor.name}
+                        className="max-w-[90%] max-h-[90%] object-contain transition-opacity duration-500 group-hover:opacity-80"
+                      />
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -88,11 +131,20 @@ const Sponsors = () => {
         >
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           <div className="flex flex-col items-center text-center gap-4">
-            <h2 className="text-2xl font-bold text-white font-squidFont">Join Our Mission</h2>
+            <h2 className="text-2xl font-bold text-white font-squidFont">
+              Join Our Mission
+            </h2>
             <p className="text-md text-gray-300 max-w-2xl">
-              Partner with us to shape the future of robotics and empower the next generation of innovators.
+              Partner with us to shape the future of robotics and empower the
+              next generation of innovators.
             </p>
-            <Button text="Become a Sponsor" textSize="text-lg" iconLink={<i className="ri-rocket-line text-xl"></i>} />
+
+            <Button
+              text="Become a Sponsor"
+              textSize="text-lg"
+              iconLink={<i className="ri-rocket-line text-xl"></i>}
+              onClick={handleSponsorClick}
+            />
           </div>
         </motion.div>
       </div>

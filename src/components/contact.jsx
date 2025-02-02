@@ -77,7 +77,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className="relative z-[100] min-h-screen py-12 px-4 sm:px-6 lg:px-8 lg:text-left text-center ">
+    <div id='contact' className="relative z-[100] min-h-screen py-12 px-4 sm:px-6 lg:px-8 lg:text-left text-center">
       <div className="max-w-7xl mx-auto backdrop-blur-lg bg-black/50 border border-pink-500/50 rounded-2xl shadow-lg">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Column - Contact Information */}
@@ -87,15 +87,15 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Chat with us</h3>
                 <p className="text-gray-300 mt-2">Our robot team is ready to assist.</p>
                 <a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                robonith@nith.ac.in
+                  robonith@nith.ac.in
                 </a><a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
                   Milind Gupta : +91 8957895881
                 </a><a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                <h3>For General Queries : <a href="mailto:robonith@nith.ac.in" className="  text-white hover:text-pink-300 mt-1 block">
-                Purushottam Singh : +91 9031909034
-                </a></h3><a href="mailto:robonith@nith.ac.in" className="  text-white hover:text-pink-300 mt-1 block">
-                Utkarsh Agrawaal : +91 8299284936
-                </a>
+                  <h3>For General Queries : <a href="mailto:robonith@nith.ac.in" className="text-white hover:text-pink-300 mt-1 block">
+                    Purushottam Singh : +91 9031909034
+                  </a></h3><a href="mailto:robonith@nith.ac.in" className="text-white hover:text-pink-300 mt-1 block">
+                    Utkarsh Agrawaal : +91 8299284936
+                  </a>
                 </a>
               </div>
               <div>
@@ -150,6 +150,7 @@ const Contact = () => {
                       } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.name}
                       onChange={handleChange}
+                      style={{ padding: '1rem' }}
                     />
                     {formErrors.name && <p className="text-red-500 text-sm mt-1">Name is required</p>}
                   </div>
@@ -168,6 +169,7 @@ const Contact = () => {
                       } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.email}
                       onChange={handleChange}
+                      style={{ padding: '1.25rem' }}
                     />
                     {formErrors.email && <p className="text-red-500 text-sm mt-1">Please enter a valid email</p>}
                   </div>
@@ -186,6 +188,7 @@ const Contact = () => {
                       } focus:outline-none focus:ring-pink-500 focus:border-pink-500 bg-transparent`}
                       value={formData.message}
                       onChange={handleChange}
+                      style={{ padding: '2.9rem' }}
                     />
                   </div>
                 </div>
