@@ -32,6 +32,8 @@ const Home = () => {
               text="Register Now"
               textSize="text-2xl"
               iconLink={<i className="ri-arrow-right-line"></i>}
+              onClick={() => {}}
+              ariaLabel="Register Now button"
             />
           </div>
         </section>
