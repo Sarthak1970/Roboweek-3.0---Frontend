@@ -16,7 +16,6 @@ const Navbar = () => {
     { name: 'Contact', href: '#contact', icon: 'ri-mail-line' },
   ];
 
-  // This function scrolls to the contact section  
 
   const handleScrollToContact = (event) => {
     event.preventDefault();
