@@ -124,7 +124,7 @@ const Events = () => {
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
       rulebookLink: "https://example.com/rulebook/hackathon",
-      registrationLink: "https://example.com/register/hackathon",
+      registrationLink: "https://unstop.com/hackathons/hackathon-roboweek-30-nit-hamirpur-1387760",
       image : 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738609786/WhatsApp_Image_2025-02-04_at_00.38.15_d56f3b26_avnpo1.jpg'
     }
   ];
