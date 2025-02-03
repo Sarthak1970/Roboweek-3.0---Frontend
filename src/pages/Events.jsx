@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
+// import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
 
 const Events = () => {
@@ -252,23 +252,74 @@ const EventImageOrPlaceholder = ({ event }) => {
                 onClick={(e) => e.stopPropagation()}
                 className="bg-black/90 border border-pink-500/30 rounded-xl p-8 overflow-y-auto"
               >
-                {selectedEvent.type === "Hackathon" ? (
-                  <div className="w-full h-72 flex items-center justify-center border-2 border-dashed border-pink-500/50 rounded-xl bg-pink-500/10 mb-6">
-                    <div className="text-center px-4">
-                      <p className="text-pink-400 text-3xl font-bold mb-2">✨</p>
-                      <p className="text-pink-400 text-xl font-semibold">Will be revealed soon</p>
-                    </div>
-                  </div>
-                ) : selectedEvent.image && (
+                {selectedEvent.image && (
                   <img
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
                     className="w-full h-72 object-cover rounded-xl mb-6"
                   />
                 )}
-                
                 <h2 className="text-3xl font-bold text-pink-400 mb-4">{selectedEvent.title}</h2>
-                {/* Rest of the modal content remains the same */}
+                <div className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4 text-gray-300">
+                    <p><span className="text-pink-400">Date:</span> {selectedEvent.date}</p>
+                    <p><span className="text-pink-400">Time:</span> {selectedEvent.details.time}</p>
+                    <p><span className="text-pink-400">Venue:</span> {selectedEvent.details.venue}</p>
+                    {selectedEvent.details.prize && (
+                      <p><span className="text-pink-400">Prize:</span> {selectedEvent.details.prize}</p>
+                    )}
+                  </div>
+
+                  {selectedEvent.details.requirements && (
+                    <div className="mt-4">
+                      <h3 className="text-xl font-semibold text-pink-400 mb-2">Requirements</h3>
+                      <ul className="list-disc pl-5 text-gray-300">
+                        {selectedEvent.details.requirements.map((req, index) => (
+                          <li key={index}>{req}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedEvent.details.rules && (
+                    <div className="mt-4">
+                      <h3 className="text-xl font-semibold text-pink-400 mb-2">Rules</h3>
+                      <ul className="list-disc pl-5 text-gray-300">
+                        {selectedEvent.details.rules.map((rule, index) => (
+                          <li key={index}>{rule}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedEvent.rulebookLink && (
+                    <div className="mt-4">
+                      <a
+                        href={selectedEvent.rulebookLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-pink-400 underline"
+                      >
+                        RuleBook
+                      </a>
+                    </div>
+                  )}
+
+                  <div className="flex justify-end gap-4 mt-8">
+                    <Button
+                      onClick={() => setSelectedEvent(null)}
+                      text="Close"
+                      textSize="text-lg"
+                      iconLink={<i className="ri-close-line"></i>}
+                    />
+                    <Button
+                      onClick={() => handleRegister(selectedEvent)}
+                      text="Register"
+                      textSize="text-lg"
+                      iconLink={<i className="ri-user-add-line"></i>}
+                    />
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           )}
