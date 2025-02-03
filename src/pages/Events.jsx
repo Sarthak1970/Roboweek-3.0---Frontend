@@ -70,54 +70,54 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
-      title: "✨ To be revealed",
+      title: "✨ Workshop 1",
       type: "workshop",
-      date: "To be revealed",
-      description: "Get ready for an inspiring Hackathon! Details coming soon.",
-      categories: ["Coming Soon"],
+      date: "March 25, 2025",
+      description: "An immersive workshop on robotics and AI integration",
+      categories: ["Robotics", "AI"],
       details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Certificate of Attendance",
+        venue: "NIT Hamirpur Auditorium",
+        time: "10:00 AM - 1:00 PM",
+        prize: "Certificate of Excellence",
         teamSize: "Individual",
-        requirements: ["No special requirements at this time."],
-        rules: ["Registration required", "Be on time"]
+        requirements: ["Laptop with Python installed", "Basic programming knowledge"],
+        rules: ["Registration required", "Be on time", "No plagiarism"]
       },
-      rulebookLink: null,
+      rulebookLink: "https://example.com/rulebook/workshop1",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
     },
     {
-      title: "✨To be revealed",
+      title: "✨ Workshop 2",
       type: "workshop",
-      date: "To be revealed",
-      description: "An exciting speaker will be announced soon. Stay tuned!",
-      categories: ["Coming Soon"],
+      date: "March 26, 2025",
+      description: "Hands-on session on IoT and smart systems",
+      categories: ["IoT", "Embedded Systems"],
       details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Certificate of Attendance",
+        venue: "NIT Hamirpur Lab 3",
+        time: "2:00 PM - 5:00 PM",
+        prize: "Certificate of Participation",
         teamSize: "Individual",
-        requirements: ["No special requirements at this time."],
-        rules: ["Registration required", "Be on time"]
+        requirements: ["Basic electronics knowledge", "Arduino kit (optional)"],
+        rules: ["Registration required", "Follow lab safety protocols"]
       },
-      rulebookLink: null,
+      rulebookLink: "https://example.com/rulebook/workshop2",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513187/WhatsApp_Image_2025-02-02_at_21.47.24_3c737600_toupm4.jpg'
     },
     {
-      title: "✨ Workshop to be revealed",
+      title: "✨ Hackathon",
       type: "Hackathon",
-      date: "To be revealed",
-      description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
-      categories: ["Coming Soon"],
+      date: "March 27-28, 2025",
+      description: "24-hour coding marathon to solve real-world problems",
+      categories: ["Coding", "Problem Solving"],
       details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Participation Certificate",
-        teamSize: "To be announced",
-        requirements: ["No special requirements at this time."],
-        rules: ["No late entries allowed.", "Follow the session guidelines."]
+        venue: "NIT Hamirpur Innovation Center",
+        time: "10:00 AM - 10:00 AM",
+        prize: "₹50,000 + Internship Opportunities",
+        teamSize: "2-4 members",
+        requirements: ["Laptop with necessary software", "Team registration"],
+        rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
-      rulebookLink: null
+      rulebookLink: "https://example.com/rulebook/hackathon"
     },
     {
       title: "✨ Workshop to be revealed",
@@ -189,11 +189,11 @@ const EventImageOrPlaceholder = ({ event }) => {
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 font-squidFont">
             Events at <span className="text-pink-400">RoboWeek 3.0</span>
           </h1>
-          <p className="text-xl text-pink-100">Discover exciting events and competitions</p>
+ 
         </motion.div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="z-[1000] flex flex-wrap justify-center gap-4 mb-12">
           {categories.map(category => (
             <button
               key={category.id}
