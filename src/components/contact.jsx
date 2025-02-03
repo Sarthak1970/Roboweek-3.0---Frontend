@@ -91,10 +91,10 @@ const Contact = () => {
                     robonith@nith.ac.in
                   </a>
                   <div className="text-gray-300">
-                    <p>Milind Gupta: <a href="tel:+918957895881" className="text-pink-400 hover:text-pink-300">+91 8957895881</a></p>
+                    <p>MILIND GUPTA: <a href="tel:+918957895881" className="text-pink-400 hover:text-pink-300">+91 8957895881</a></p>
                     <h4 className="mt-2 font-medium">For General Queries:</h4>
-                    <p>Purushottam Singh: <a href="tel:+919031909034" className="text-pink-400 hover:text-pink-300">+91 9031909034</a></p>
-                    <p>Utkarsh Agrawaal: <a href="tel:+917906384184" className="text-pink-400 hover:text-pink-300">+91 7906384184</a></p>
+                    <p>PURUSHOTTAM SINGH: <a href="tel:+919031909034" className="text-pink-400 hover:text-pink-300">+91 9031909034</a></p>
+                    <p>UTKARSH AGRAWAL: <a href="tel:+917906384184" className="text-pink-400 hover:text-pink-300">+91 7906384184</a></p>
                   </div>
                 </div>
               </div>
