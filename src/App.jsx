@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
 function App() {
   return (
     <Router>
-      <div className="relative z-[0]">
+      <div className="relative z-[0] opacity-50">
         <SplashCursor />
       </div>
       <Layout>

@@ -117,23 +117,8 @@ const Events = () => {
         requirements: ["Laptop with necessary software", "Team registration"],
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
-      rulebookLink: "https://example.com/rulebook/hackathon"
-    },
-    {
-      title: "✨ Workshop to be revealed",
-      type: "Hackathon",
-      date: "To be revealed",
-      description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
-      categories: ["Coming Soon"],
-      details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Participation Certificate",
-        teamSize: "极To be announced",
-        requirements: ["No special requirements at this time."],
-        rules: ["No late entries allowed.", "Follow the session guidelines."]
-      },
-      rulebookLink: null
+      rulebookLink: "https://example.com/rulebook/hackathon",
+      image : 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738609786/WhatsApp_Image_2025-02-04_at_00.38.15_d56f3b26_avnpo1.jpg'
     }
   ];
     
@@ -156,16 +141,16 @@ const Events = () => {
     alert(`Successfully registered for ${event.title}`);
   };
 const EventImageOrPlaceholder = ({ event }) => {
-    if (event.type === "Hackathon") {
-      return (
-        <div className="w-3/4 h-48 mx-auto flex items-center justify-center border-2 border-dashed border-pink-500/50 rounded-xl bg-pink-500/10">
-          <div className="text-center px-4">
-            <p className="text-pink-400 text-xl font-bold mb-2">✨</p>
-            <p className="text-pink-400 font-semibold">Will be revealed soon</p>
-          </div>
-        </div>
-      );
-    }
+    // if (event.type === "Hackathon") {
+    //   return (
+    //     <div className="w-3/4 h-48 mx-auto flex items-center justify-center border-2 border-dashed border-pink-500/50 rounded-xl bg-pink-500/10">
+    //       <div className="text-center px-4">
+    //         <p className="text-pink-400 text-xl font-bold mb-2">✨</p>
+    //         <p className="text-pink-400 font-semibold">Will be revealed soon</p>
+    //       </div>
+    //     </div>
+    //   );
+    // }
     
     return event.image ? (
       <img 
@@ -250,18 +235,18 @@ const EventImageOrPlaceholder = ({ event }) => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-black/90 border border-pink-500/30 rounded-xl p-8 overflow-y-auto"
+                className="bg-black/90 border border-pink-500/30 rounded-xl p-6 max-w-[95vw] max-h-[90vh] overflow-y-auto"
               >
                 {selectedEvent.image && (
                   <img
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
-                    className="w-full h-72 object-cover rounded-xl mb-6"
+                    className="w-full h-48 sm:h-56 object-cover rounded-xl mb-4"
                   />
                 )}
-                <h2 className="text-3xl font-bold text-pink-400 mb-4">{selectedEvent.title}</h2>
-                <div className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4 text-gray-300">
+                <h2 className="text-2xl font-bold text-pink-400 mb-3">{selectedEvent.title}</h2>
+                <div className="space-y-4 text-sm sm:text-base">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-300">
                     <p><span className="text-pink-400">Date:</span> {selectedEvent.date}</p>
                     <p><span className="text-pink-400">Time:</span> {selectedEvent.details.time}</p>
                     <p><span className="text-pink-400">Venue:</span> {selectedEvent.details.venue}</p>
@@ -271,9 +256,9 @@ const EventImageOrPlaceholder = ({ event }) => {
                   </div>
 
                   {selectedEvent.details.requirements && (
-                    <div className="mt-4">
-                      <h3 className="text-xl font-semibold text-pink-400 mb-2">Requirements</h3>
-                      <ul className="list-disc pl-5 text-gray-300">
+                    <div className="mt-3">
+                      <h3 className="text-lg font-semibold text-pink-400 mb-1">Requirements</h3>
+                      <ul className="list-disc pl-4 text-gray-300">
                         {selectedEvent.details.requirements.map((req, index) => (
                           <li key={index}>{req}</li>
                         ))}
@@ -282,9 +267,9 @@ const EventImageOrPlaceholder = ({ event }) => {
                   )}
 
                   {selectedEvent.details.rules && (
-                    <div className="mt-4">
-                      <h3 className="text-xl font-semibold text-pink-400 mb-2">Rules</h3>
-                      <ul className="list-disc pl-5 text-gray-300">
+                    <div className="mt-3">
+                      <h3 className="text-lg font-semibold text-pink-400 mb-1">Rules</h3>
+                      <ul className="list-disc pl-4 text-gray-300">
                         {selectedEvent.details.rules.map((rule, index) => (
                           <li key={index}>{rule}</li>
                         ))}
@@ -293,7 +278,7 @@ const EventImageOrPlaceholder = ({ event }) => {
                   )}
 
                   {selectedEvent.rulebookLink && (
-                    <div className="mt-4">
+                    <div className="mt-3">
                       <a
                         href={selectedEvent.rulebookLink}
                         target="_blank"
@@ -305,17 +290,17 @@ const EventImageOrPlaceholder = ({ event }) => {
                     </div>
                   )}
 
-                  <div className="flex justify-end gap-4 mt-8">
+                  <div className="flex justify-end gap-3 mt-6">
                     <Button
                       onClick={() => setSelectedEvent(null)}
                       text="Close"
-                      textSize="text-lg"
+                      textSize="text-base sm:text-lg"
                       iconLink={<i className="ri-close-line"></i>}
                     />
                     <Button
                       onClick={() => handleRegister(selectedEvent)}
                       text="Register"
-                      textSize="text-lg"
+                      textSize="text-base sm:text-lg"
                       iconLink={<i className="ri-user-add-line"></i>}
                     />
                   </div>
