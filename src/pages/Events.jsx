@@ -22,6 +22,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/pathfinder",
+      registrationLink: "https://unstop.com/p/pathfinder-roboweek-30-nit-hamirpur-1386628",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154215/pathfinder_dec5zk.png', 
     },
     {
@@ -37,6 +38,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://极example.com/rulebook/competition3",
+      registrationLink: "https://unstop.com/competitions/bowl-the-bot-roboweek-30-nit-hamirpur-1386663",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154212/BowlBotDerby_zhwklt.png', 
     },
     {
@@ -52,6 +54,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/competition3",
+      registrationLink: "https://unstop.com/competitions/mecha-mayem-roboweek-30-nit-hamirpur-1387699",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154205/MECHA_MAYHEM_1_hevnpv.png',
     },
     {
@@ -59,7 +62,7 @@ const Events = () => {
       type: "competition",
       date: "Mar 24, 2025",
       description: "CATCH THE RAINBOW !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      categories: ["requirments 极1", "requirments 2", "requirments 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
@@ -67,6 +70,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://example.com/rulebook/competition3",
+      registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
@@ -78,12 +82,13 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur Auditorium",
         time: "10:00 AM - 1:00 PM",
-        prize: "Certificate of Excellence",
+        prize极: "Certificate of Excellence",
         teamSize: "Individual",
         requirements: ["Laptop with Python installed", "Basic programming knowledge"],
         rules: ["Registration required", "Be on time", "No plagiarism"]
       },
       rulebookLink: "https://example.com/rulebook/workshop1",
+      registrationLink: "https://example.com/register/workshop1",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
     },
     {
@@ -101,6 +106,7 @@ const Events = () => {
         rules: ["Registration required", "Follow lab safety protocols"]
       },
       rulebookLink: "https://example.com/rulebook/workshop2",
+      registrationLink: "https://example.com/register/workshop2",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513187/WhatsApp_Image_2025-02-02_at_21.47.24_3c737600_toupm4.jpg'
     },
     {
@@ -118,6 +124,7 @@ const Events = () => {
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
       rulebookLink: "https://example.com/rulebook/hackathon",
+      registrationLink: "https://example.com/register/hackathon",
       image : 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738609786/WhatsApp_Image_2025-02-04_at_00.38.15_d56f3b26_avnpo1.jpg'
     }
   ];
@@ -134,11 +141,8 @@ const Events = () => {
     : events.filter(event => event.type === selectedCategory);
 
   const handleRegister = (event) => {
-    if (!user) {
-      alert("Please login to register for events");
-      return;
-    }
-    alert(`Successfully registered for ${event.title}`);
+    window.open(`${event.registrationLink}`, '_blank')
+    // alert(`Successfully registered for ${event.title}`);
   };
 const EventImageOrPlaceholder = ({ event }) => {
     // if (event.type === "Hackathon") {

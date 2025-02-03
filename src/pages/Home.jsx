@@ -35,7 +35,7 @@ const Home = () => {
               text="Register Now"
               textSize="text-2xl"
               iconLink={<i className="ri-arrow-right-line"></i>}
-              onClick={() => {}}
+              onClick={() => window.open('https://unstop.com/college-fests/roboweek-30-national-institute-of-technology-nit-hamirpur-320667', '_blank')}
               ariaLabel="Register Now button"
             />
           </div>
