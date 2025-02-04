@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 // import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
+import { h1 } from 'framer-motion/client';
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -139,7 +140,7 @@ const Events = () => {
         requirements: ["Laptop with necessary software", "Team registration"],
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
-      rulebookLink: "https://example.com/rulebook/hackathon",
+      rulebookLink: "https://drive.google.com/file/d/1_PLHCiWBHkv0EsEHyrqaVp28El1oKYV8/view?usp=sharing",
       registrationLink: "https://unstop.com/hackathons/hackathon-roboweek-30-nit-hamirpur-1387760",
       image : 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738609786/WhatsApp_Image_2025-02-04_at_00.38.15_d56f3b26_avnpo1.jpg'
     }
@@ -299,7 +300,7 @@ const EventImageOrPlaceholder = ({ event }) => {
                     </div>
                   )}
 
-                  {selectedEvent.rulebookLink && (
+                  {selectedEvent.rulebookLink && selectedEvent.type !== 'workshop' && (
                     <div className="mt-3">
                       <a
                         href={selectedEvent.rulebookLink}
