@@ -134,7 +134,7 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur Innovation Center",
         time: "10:00 AM - 10:00 AM",
-        prize: "To Be Revealed Soon",
+        prize: "To Be Announced ",
         teamSize: "2-4 members",
         requirements: ["Laptop with necessary software", "Team registration"],
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
