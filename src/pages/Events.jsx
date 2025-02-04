@@ -1,18 +1,18 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
+// import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const { user } = useAuth() || {};
+  // const { user } = useAuth() || {};
 
   const events = [
     {
       title: "PathFinder",
       type: "competition",
-      date: "Mar 22, 2025",
+      date: "极Mar 22, 2025",
       description: "Driven By code, Guided By Lines !",
       categories: ["requirments 1", "requirments 2", "requirments 3"],
       details: {
@@ -21,7 +21,10 @@ const Events = () => {
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
+
       rulebookLink: "https://drive.google.com/drive/folders/1BxCL5Tadqcz3WvZwQ1zL1KL5UeTfo2ih",
+      registrationLink: "https://unstop.com/p/pathfinder-roboweek-30-nit-hamirpur-1386628",
+
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154215/pathfinder_dec5zk.png', 
     },
     {
@@ -36,22 +39,26 @@ const Events = () => {
         prize: " To Be Revealed Soon",
         teamSize: "1-4 members",
       },
+
       rulebookLink: "https://drive.google.com/drive/folders/1_aFeMecD8tPNR3tOXLIyzeLQKYKs17GL",
+      registrationLink: "https://unstop.com/competitions/bowl-the-bot-roboweek-30-nit-hamirpur-1386663",
+
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154212/BowlBotDerby_zhwklt.png', 
     },
     {
       title: "MECHA MAYHEM",
       type: "competition",
-      date: "Mar 22, 2025",
+      date极: "Mar 22, 2025",
       description: "BOOK YOUR TICKET TO THE FUTURE !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      categories: ["requirments 极1", "requirments 2", "requirments 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "2:00 PM - 4:00 PM",
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
-      },
-      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
+      },      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
+      registrationLink: "https://unstop.com/competitions/mecha-mayem-roboweek-30-nit-hamirpur-1387699",
+    
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154205/MECHA_MAYHEM_1_hevnpv.png',
     },
     {
@@ -59,79 +66,82 @@ const Events = () => {
       type: "competition",
       date: "Mar 24, 2025",
       description: "CATCH THE RAINBOW !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      categories: ["requirments 极1", "requirments 2", "requirments 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
+
       rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
+      registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
+
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
-      title: "✨ Workshop to be revealed",
+      title: "✨ Entrepreneurship Workshop",
       type: "workshop",
-      date: "",
+
+      date: "23 March 2024",
       description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
       categories: ["Coming Soon"],
+
       details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Participation Certificate",
-        teamSize: "To be announced",
-        requirements: ["No special requirements at this time."],
-        rules: ["No late entries allowed.", "Follow the session guidelines."]
+        venue: "NIT Hamirpur Seminar Hall",
+        time: "9:00 AM - 12:00 PM",
+        prize: "Mentorship Opportunities + Startup Incubation",
+        teamSize: "1-3 members",
+        requirements: ["Laptop", "Business idea pitch deck (optional)"],
+        rules: ["Registration required", "Professional attire", "No recording allowed"]
       },
-      rulebookLink: null
+      rulebookLink: "https://roboweek.com/rulebook/entrepreneurship",
+      registrationLink: "https://unstop.com/p/entrepreneurship-of-golden-era-of-startups-roboweek-30-nit-hamirpur-1389226",
+      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
     },
     {
-      title: "✨ Workshop to be revealed",
+      title: "🤖 AI in Robotics Workshop",
       type: "workshop",
-      date: "To be revealed",
-      description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
-      categories: ["Coming Soon"],
+      date: "March XX, 2025",
+      description: "Explore the integration of AI in modern robotics systems",
+      categories: ["Artificial Intelligence", "Robotics", "Machine Learning"],
       details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Participation Certificate",
-        teamSize: "To be announced",
-        requirements: ["No special requirements at this time."],
-        rules: ["No late entries allowed.", "Follow the session guidelines."]
+        venue: "NIT Hamirpur Robotics Lab",
+        time: "10:00 AM - 1:00 PM",
+        prize: "Certificate of Excellence + AI Starter Kit",
+        teamSize: "1-2 members",
+        requirements: [
+          "Basic Python programming knowledge",
+          "Laptop with Python installed",
+          "Interest in robotics and AI"
+        ],
+        rules: [
+          "Pre-registration mandatory",
+          "Follow lab safety guidelines",
+          "No plagiarism in project work"
+        ]
       },
-      rulebookLink: null
+      rulebookLink: "https://roboweek.com/rulebook/ai-robotics",
+      registrationLink: "https://unstop.com/p/ai-in-robotics-roboweek-30-nit-hamirpur-1389217",
+      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513187/WhatsApp_Image_2025-02-02_at_21.47.24_3c737600_toupm4.jpg'
     },
     {
-      title: "✨ To be revealed",
+      title: "✨ Hackathon",
       type: "Hackathon",
-      date: "To be revealed",
-      description: "Get ready for an inspiring Hackathon! Details coming soon.",
-      categories: ["Coming Soon"],
+      date: "22 March , 2025",
+      description: "24-hour coding marathon to solve real-world problems",
+      categories: ["Coding", "Problem Solving"],
       details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Certificate of Attendance",
-        teamSize: "Individual",
-        requirements: ["No special requirements at this time."],
-        rules: ["Registration required", "Be on time"]
+        venue: "NIT Hamirpur Innovation Center",
+        time: "10:00 AM - 10:00 AM",
+        prize: "To Be Revealed Soon",
+        teamSize: "2-4 members",
+        requirements: ["Laptop with necessary software", "Team registration"],
+        rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
-      rulebookLink: null
-    },
-    {
-      title: "✨To be revealed",
-      type: "Hackathon",
-      date: "To be revealed",
-      description: "An exciting speaker will be announced soon. Stay tuned!",
-      categories: ["Coming Soon"],
-      details: {
-        venue: "NIT Hamirpur",
-        time: "To be revealed",
-        prize: "Certificate of Attendance",
-        teamSize: "Individual",
-        requirements: ["No special requirements at this time."],
-        rules: ["Registration required", "Be on time"]
-      },
-      rulebookLink: null
+      rulebookLink: "https://example.com/rulebook/hackathon",
+      registrationLink: "https://unstop.com/hackathons/hackathon-roboweek-30-nit-hamirpur-1387760",
+      image : 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738609786/WhatsApp_Image_2025-02-04_at_00.38.15_d56f3b26_avnpo1.jpg'
     }
   ];
     
@@ -147,11 +157,28 @@ const Events = () => {
     : events.filter(event => event.type === selectedCategory);
 
   const handleRegister = (event) => {
-    if (!user) {
-      alert("Please login to register for events");
-      return;
-    }
-    alert(`Successfully registered for ${event.title}`);
+    window.open(`${event.registrationLink}`, '_blank')
+    // alert(`Successfully registered for ${event.title}`);
+  };
+const EventImageOrPlaceholder = ({ event }) => {
+    // if (event.type === "Hackathon") {
+    //   return (
+    //     <div className="w-3/4 h-48 mx-auto flex items-center justify-center border-2 border-dashed border-pink-500/50 rounded-xl bg-pink-500/10">
+    //       <div className="text-center px-4">
+    //         <p className="text-pink-400 text-xl font-bold mb-2">✨</p>
+    //         <p className="text-pink-400 font-semibold">Will be revealed soon</p>
+    //       </div>
+    //     </div>
+    //   );
+    // }
+    
+    return event.image ? (
+      <img 
+        src={event.image} 
+        alt={event.title} 
+        className="w-3/4 h-auto object-cover object-top mx-auto"
+      />
+    ) : null;
   };
 
   return (
@@ -167,11 +194,11 @@ const Events = () => {
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 font-squidFont">
             Events at <span className="text-pink-400">RoboWeek 3.0</span>
           </h1>
-          <p className="text-xl text-pink-100">Discover exciting events and competitions</p>
+ 
         </motion.div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="z-[1000] flex flex-wrap justify-center gap-4 mb-12">
           {categories.map(category => (
             <button
               key={category.id}
@@ -200,13 +227,7 @@ const Events = () => {
               onClick={() => setSelectedEvent(event)}
               className="backdrop-blur-lg bg-black/20 rounded-xl border border-pink-500/30 overflow-hidden hover:border-pink-500 transition-all duration-300 cursor-pointer p-4"
             >
-              {event.image && (
-                <img 
-                  src={event.image} 
-                  alt={event.title} 
-                  className="w-3/4 h-auto object-cover object-top mx-auto"
-                />
-              )}
+              <EventImageOrPlaceholder event={event} />
               <div className="p-4">
                 <h3 className="text-xl font-bold text-pink-400 mb-2">{event.title}</h3>
                 <p className="text-gray-300 mb-4">{event.description}</p>
@@ -234,18 +255,20 @@ const Events = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-black/90 border border-pink-500/30 rounded-xl p-8 overflow-y-auto"
+                className="bg-black/90 border border-pink-500/30 rounded-xl p-6 max-w-[95vw] max-h-[90vh] overflow-y-auto"
               >
                 {selectedEvent.image && (
                   <img
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
+
                     className="w-full h-72 object-contain rounded-xl mb-6"
+
                   />
                 )}
-                <h2 className="text-3xl font-bold text-pink-400 mb-4">{selectedEvent.title}</h2>
-                <div className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4 text-gray-300">
+                <h2 className="text-2xl font-bold text-pink-400 mb-3">{selectedEvent.title}</h2>
+                <div className="space-y-4 text-sm sm:text-base">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-300">
                     <p><span className="text-pink-400">Date:</span> {selectedEvent.date}</p>
                     <p><span className="text-pink-400">Time:</span> {selectedEvent.details.time}</p>
                     <p><span className="text-pink-400">Venue:</span> {selectedEvent.details.venue}</p>
@@ -255,9 +278,9 @@ const Events = () => {
                   </div>
 
                   {selectedEvent.details.requirements && (
-                    <div className="mt-4">
-                      <h3 className="text-xl font-semibold text-pink-400 mb-2">Requirements</h3>
-                      <ul className="list-disc pl-5 text-gray-300">
+                    <div className="mt-3">
+                      <h3 className="text-lg font-semibold text-pink-400 mb-1">Requirements</h3>
+                      <ul className="list-disc pl-4 text-gray-300">
                         {selectedEvent.details.requirements.map((req, index) => (
                           <li key={index}>{req}</li>
                         ))}
@@ -266,9 +289,9 @@ const Events = () => {
                   )}
 
                   {selectedEvent.details.rules && (
-                    <div className="mt-4">
-                      <h3 className="text-xl font-semibold text-pink-400 mb-2">Rules</h3>
-                      <ul className="list-disc pl-5 text-gray-300">
+                    <div className="mt-3">
+                      <h3 className="text-lg font-semibold text-pink-400 mb-1">Rules</h3>
+                      <ul className="list-disc pl-4 text-gray-300">
                         {selectedEvent.details.rules.map((rule, index) => (
                           <li key={index}>{rule}</li>
                         ))}
@@ -277,7 +300,7 @@ const Events = () => {
                   )}
 
                   {selectedEvent.rulebookLink && (
-                    <div className="mt-4">
+                    <div className="mt-3">
                       <a
                         href={selectedEvent.rulebookLink}
                         target="_blank"
@@ -289,17 +312,17 @@ const Events = () => {
                     </div>
                   )}
 
-                  <div className="flex justify-end gap-4 mt-8">
+                  <div className="flex justify-end gap-3 mt-6">
                     <Button
                       onClick={() => setSelectedEvent(null)}
                       text="Close"
-                      textSize="text-lg"
+                      textSize="text-base sm:text-lg"
                       iconLink={<i className="ri-close-line"></i>}
                     />
                     <Button
                       onClick={() => handleRegister(selectedEvent)}
                       text="Register"
-                      textSize="text-lg"
+                      textSize="text-base sm:text-lg"
                       iconLink={<i className="ri-user-add-line"></i>}
                     />
                   </div>

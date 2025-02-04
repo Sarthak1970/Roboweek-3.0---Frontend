@@ -86,30 +86,34 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Chat with us</h3>
                 <p className="text-gray-300 mt-2">Our robot team is ready to assist.</p>
-                <a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                  robonith@nith.ac.in
-                </a><a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                  Milind Gupta : +91 8957895881
-                </a><a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 mt-1 block">
-                  <h3>For General Queries : <a href="mailto:robonith@nith.ac.in" className="text-white hover:text-pink-300 mt-1 block">
-                    Purushottam Singh : +91 9031909034
-                  </a></h3><a href="mailto:robonith@nith.ac.in" className="text-white hover:text-pink-300 mt-1 block">
-                    Utkarsh Agrawaal : +91 8299284936
+                <div className="space-y-2 mt-3">
+                  <a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 block">
+                    robonith@nith.ac.in
                   </a>
-                </a>
+                  <div className="text-gray-300">
+                    <p>MILIND GUPTA: <a href="tel:+918957895881" className="text-pink-400 hover:text-pink-300">+91 8957895881</a></p>
+                    <h4 className="mt-2 font-medium">For General Queries:</h4>
+                    <p>PURUSHOTTAM SINGH: <a href="tel:+919031909034" className="text-pink-400 hover:text-pink-300">+91 9031909034</a></p>
+                    <p>UTKARSH AGRAWAL: <a href="tel:+917906384184" className="text-pink-400 hover:text-pink-300">+91 7906384184</a></p>
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Visit us</h3>
-                <p className="text-gray-300 mt-2">National Institute of Technology, Hamirpur</p>
-                <p className="text-gray-300">Anu, Hamirpur District</p>
-                <p className="text-gray-300">Himachal Pradesh, India</p>
-                <p className="text-gray-300">PIN Code: 177005</p>
+                <div className="text-gray-300 mt-2 space-y-1">
+                  <p>National Institute of Technology, Hamirpur</p>
+                  <p>Anu, Hamirpur District</p>
+                  <p>Himachal Pradesh, India</p>
+                  <p>PIN Code: 177005</p>
+                </div>
               </div>
 
               <div>
                 <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Operating Hours</h3>
-                <p className="text-gray-300 mt-2">Our robots work 24/7</p>
-                <p className="text-pink-400">AI Support Always Available</p>
+                <div className="text-gray-300 mt-2 space-y-1">
+                  <p>Our robots work 24/7</p>
+                  <p className="text-pink-400">AI Support Always Available</p>
+                </div>
               </div>
 
               {/* Social Media Links */}

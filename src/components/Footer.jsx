@@ -117,7 +117,7 @@ const Footer = () => {
     //         </ul>
     //       </article>
     //     </div>
-        <div className="flex items-center justify-center mt-8 h-20  border-t border-pink-500/30 text-center">
+        <div className="z-[1000] backdrop-blur-xl flex items-center justify-center mt-8 h-20  border-t border-pink-500/30 text-center">
           <p className="text-gray-300">
             &copy; {new Date().getFullYear()} Robotics Society NITH. All rights reserved.
           </p>

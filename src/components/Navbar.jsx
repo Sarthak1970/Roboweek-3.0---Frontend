@@ -20,7 +20,7 @@ const Navbar = () => {
   const handleScrollToContact = (event) => {
     event.preventDefault();
     if (window.location.pathname !== '/Home') {
-      navigate('/');
+      navigate('/Home');
       setTimeout(() => {
         const contactSection = document.getElementById('contact');
         if (contactSection) {

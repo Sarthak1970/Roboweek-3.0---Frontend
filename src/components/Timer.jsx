@@ -31,8 +31,8 @@ const CountdownTimer = () => {
     return (
         <section className='relative flex flex-col items-center justify-center bg-transparent w-full h-full'>
             <div className="relative z-10 backdrop-blur-sm bg-black/30 p-4 sm:p-6 md:p-8 rounded-2xl border border-white/20 shadow-2xl">
-                <h2 className='text-center mb-4 text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500'>
-                    TIME REMAINING
+                <h2 className='text-center mb-4 text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 font-squidFont'>
+                    <i class="ri-hourglass-line"></i> Countdown to Event <i class="ri-hourglass-line"></i>
                 </h2>
                 <div className='flex gap-1 md:gap-2 justify-center items-center flex-wrap'>
                     {timeLeft.days !== undefined ? (
