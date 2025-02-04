@@ -12,7 +12,7 @@ const Events = () => {
     {
       title: "PathFinder",
       type: "competition",
-      date: "极Mar 22, 2025",
+      date: "Mar 22, 2025",
       description: "Driven By code, Guided By Lines !",
       categories: ["requirments 1", "requirments 2", "requirments 3"],
       details: {
@@ -48,9 +48,9 @@ const Events = () => {
     {
       title: "MECHA MAYHEM",
       type: "competition",
-      date极: "Mar 22, 2025",
+      date: "Mar 22, 2025",
       description: "BOOK YOUR TICKET TO THE FUTURE !",
-      categories: ["requirments 极1", "requirments 2", "requirments 3"],
+      categories: ["requirments 1", "requirments 2", "requirments 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "2:00 PM - 4:00 PM",
@@ -66,11 +66,11 @@ const Events = () => {
       type: "competition",
       date: "Mar 24, 2025",
       description: "CATCH THE RAINBOW !",
-      categories: ["requirments 极1", "requirments 2", "requirments 3"],
+      categories: ["requirments 1", "requirments 2", "requirments 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: "To Be Revealed Soon",
+        prize: "To be announced",
         teamSize: "1-4 members",
       },
 
@@ -90,7 +90,7 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur Seminar Hall",
         time: "9:00 AM - 12:00 PM",
-        prize: "Mentorship Opportunities + Startup Incubation",
+        prize: "To be announced",
         teamSize: "1-3 members",
         requirements: ["Laptop", "Business idea pitch deck (optional)"],
         rules: ["Registration required", "Professional attire", "No recording allowed"]
@@ -108,7 +108,7 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur Robotics Lab",
         time: "10:00 AM - 1:00 PM",
-        prize: "Certificate of Excellence + AI Starter Kit",
+        prize: "To be announced",
         teamSize: "1-2 members",
         requirements: [
           "Basic Python programming knowledge",
@@ -134,7 +134,7 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur Innovation Center",
         time: "10:00 AM - 10:00 AM",
-        prize: "To Be Revealed Soon",
+        prize: "To Be Announced ",
         teamSize: "2-4 members",
         requirements: ["Laptop with necessary software", "Team registration"],
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
