@@ -25,7 +25,9 @@ const Home = () => {
         <div className='flex flex-col justify-center items-center space-y-8 gap-205'>
           <h1 className='relative z-[100] text-white/80 font-squidFont lg:text-[8vw] mt-20 lg:leading-[8vw] leading-[14vw] text-[14vw] text-center '>ROBOWEEK 3.0</h1>
 
-          <h2 className='font-squidFont text-white text-2xl lg:text-3xl'>- - - MYRAID OF iNNOVATION - - -</h2>
+            <h2 className='font-squidFont text-white hidden lg:block text-2xl lg:text-3xl'>- - - MYRAID OF iNNOVATION - - -</h2>
+          <h2 className='font-squidFont text-white lg:hidden text-2xl lg:text-3xl'>MYRAID OF iNNOVATION</h2>
+            
 
             <CountdownTimer />
             <div className="mt-5">
