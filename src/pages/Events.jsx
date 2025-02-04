@@ -18,11 +18,13 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "4:00 PM  - 6:00 PM",
-        prize: "₹ 70000000",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://example.com/rulebook/pathfinder",
+
+      rulebookLink: "https://drive.google.com/drive/folders/1BxCL5Tadqcz3WvZwQ1zL1KL5UeTfo2ih",
       registrationLink: "https://unstop.com/p/pathfinder-roboweek-30-nit-hamirpur-1386628",
+
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154215/pathfinder_dec5zk.png', 
     },
     {
@@ -34,11 +36,13 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: "₹ 70000000",
+        prize: " To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://极example.com/rulebook/competition3",
+
+      rulebookLink: "https://drive.google.com/drive/folders/1_aFeMecD8tPNR3tOXLIyzeLQKYKs17GL",
       registrationLink: "https://unstop.com/competitions/bowl-the-bot-roboweek-30-nit-hamirpur-1386663",
+
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154212/BowlBotDerby_zhwklt.png', 
     },
     {
@@ -50,11 +54,11 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "2:00 PM - 4:00 PM",
-        prize: "₹ XXXX",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
-      },
-      rulebookLink: "https://example.com/rulebook/competition3",
+      },      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
       registrationLink: "https://unstop.com/competitions/mecha-mayem-roboweek-30-nit-hamirpur-1387699",
+    
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154205/MECHA_MAYHEM_1_hevnpv.png',
     },
     {
@@ -66,19 +70,23 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: "₹ 700000000000000000000",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://example.com/rulebook/competition3",
+
+      rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
       registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
+
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
       title: "✨ Entrepreneurship Workshop",
       type: "workshop",
-      date: "March XX, 2025",
-      description: "Master the art of building successful tech startups",
-      categories: ["Business", "Technology", "Innovation"],
+
+      date: "23 March 2024",
+      description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
+      categories: ["Coming Soon"],
+
       details: {
         venue: "NIT Hamirpur Seminar Hall",
         time: "9:00 AM - 12:00 PM",
@@ -120,13 +128,13 @@ const Events = () => {
     {
       title: "✨ Hackathon",
       type: "Hackathon",
-      date: "March XX, 2025",
+      date: "22 March , 2025",
       description: "24-hour coding marathon to solve real-world problems",
       categories: ["Coding", "Problem Solving"],
       details: {
         venue: "NIT Hamirpur Innovation Center",
         time: "10:00 AM - 10:00 AM",
-        prize: "₹50,000 + Internship Opportunities",
+        prize: "To Be Revealed Soon",
         teamSize: "2-4 members",
         requirements: ["Laptop with necessary software", "Team registration"],
         rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
@@ -253,7 +261,9 @@ const EventImageOrPlaceholder = ({ event }) => {
                   <img
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
-                    className="w-full h-48 sm:h-56 object-cover rounded-xl mb-4"
+
+                    className="w-full h-72 object-contain rounded-xl mb-6"
+
                   />
                 )}
                 <h2 className="text-2xl font-bold text-pink-400 mb-3">{selectedEvent.title}</h2>
