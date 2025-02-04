@@ -14,7 +14,7 @@ const objectives = [
 
 const About = () => {
   return (
-    <div className="min-h-screen py-20 z-1000">
+    <div className="min-h-screen py-20 z-1000 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4 pt-10 sm:px-6 lg:px-8">
         {/* Title Section */}
         <motion.div
