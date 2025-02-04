@@ -74,45 +74,53 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
-      title: "✨ Workshop 1",
+      title: "✨ Entrepreneurship Workshop",
       type: "workshop",
-      date: "March 25, 2025",
-      description: "An immersive workshop on robotics and AI integration",
-      categories: ["Robotics", "AI"],
+      date: "March XX, 2025",
+      description: "Master the art of building successful tech startups",
+      categories: ["Business", "Technology", "Innovation"],
       details: {
-        venue: "NIT Hamirpur Auditorium",
-        time: "10:00 AM - 1:00 PM",
-        prize极: "Certificate of Excellence",
-        teamSize: "Individual",
-        requirements: ["Laptop with Python installed", "Basic programming knowledge"],
-        rules: ["Registration required", "Be on time", "No plagiarism"]
+        venue: "NIT Hamirpur Seminar Hall",
+        time: "9:00 AM - 12:00 PM",
+        prize: "Mentorship Opportunities + Startup Incubation",
+        teamSize: "1-3 members",
+        requirements: ["Laptop", "Business idea pitch deck (optional)"],
+        rules: ["Registration required", "Professional attire", "No recording allowed"]
       },
-      rulebookLink: "https://example.com/rulebook/workshop1",
-      registrationLink: "https://example.com/register/workshop1",
+      rulebookLink: "https://roboweek.com/rulebook/entrepreneurship",
+      registrationLink: "https://unstop.com/p/entrepreneurship-of-golden-era-of-startups-roboweek-30-nit-hamirpur-1389226",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
     },
     {
-      title: "✨ Workshop 2",
+      title: "🤖 AI in Robotics Workshop",
       type: "workshop",
-      date: "March 26, 2025",
-      description: "Hands-on session on IoT and smart systems",
-      categories: ["IoT", "Embedded Systems"],
+      date: "March XX, 2025",
+      description: "Explore the integration of AI in modern robotics systems",
+      categories: ["Artificial Intelligence", "Robotics", "Machine Learning"],
       details: {
-        venue: "NIT Hamirpur Lab 3",
-        time: "2:00 PM - 5:00 PM",
-        prize: "Certificate of Participation",
-        teamSize: "Individual",
-        requirements: ["Basic electronics knowledge", "Arduino kit (optional)"],
-        rules: ["Registration required", "Follow lab safety protocols"]
+        venue: "NIT Hamirpur Robotics Lab",
+        time: "10:00 AM - 1:00 PM",
+        prize: "Certificate of Excellence + AI Starter Kit",
+        teamSize: "1-2 members",
+        requirements: [
+          "Basic Python programming knowledge",
+          "Laptop with Python installed",
+          "Interest in robotics and AI"
+        ],
+        rules: [
+          "Pre-registration mandatory",
+          "Follow lab safety guidelines",
+          "No plagiarism in project work"
+        ]
       },
-      rulebookLink: "https://example.com/rulebook/workshop2",
-      registrationLink: "https://example.com/register/workshop2",
+      rulebookLink: "https://roboweek.com/rulebook/ai-robotics",
+      registrationLink: "https://unstop.com/p/ai-in-robotics-roboweek-30-nit-hamirpur-1389217",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513187/WhatsApp_Image_2025-02-02_at_21.47.24_3c737600_toupm4.jpg'
     },
     {
       title: "✨ Hackathon",
       type: "Hackathon",
-      date: "March 27-28, 2025",
+      date: "March XX, 2025",
       description: "24-hour coding marathon to solve real-world problems",
       categories: ["Coding", "Problem Solving"],
       details: {
