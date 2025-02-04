@@ -18,10 +18,10 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "4:00 PM  - 6:00 PM",
-        prize: "₹ 70000000",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://example.com/rulebook/pathfinder",
+      rulebookLink: "https://drive.google.com/drive/folders/1BxCL5Tadqcz3WvZwQ1zL1KL5UeTfo2ih",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154215/pathfinder_dec5zk.png', 
     },
     {
@@ -33,10 +33,10 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: "₹ 70000000",
+        prize: " To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://example.com/rulebook/competition3",
+      rulebookLink: "https://drive.google.com/drive/folders/1_aFeMecD8tPNR3tOXLIyzeLQKYKs17GL",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154212/BowlBotDerby_zhwklt.png', 
     },
     {
@@ -48,10 +48,10 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "2:00 PM - 4:00 PM",
-        prize: "₹ XXXX",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://example.com/rulebook/competition3",
+      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154205/MECHA_MAYHEM_1_hevnpv.png',
     },
     {
@@ -63,16 +63,16 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: "₹ 700000000000000000000",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-      rulebookLink: "https://example.com/rulebook/competition3",
+      rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
       title: "✨ Workshop to be revealed",
       type: "workshop",
-      date: "To be revealed",
+      date: "",
       description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
       categories: ["Coming Soon"],
       details: {
@@ -240,7 +240,7 @@ const Events = () => {
                   <img
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
-                    className="w-full h-72 object-cover rounded-xl mb-6"
+                    className="w-full h-72 object-contain rounded-xl mb-6"
                   />
                 )}
                 <h2 className="text-3xl font-bold text-pink-400 mb-4">{selectedEvent.title}</h2>
