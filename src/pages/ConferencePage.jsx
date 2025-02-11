@@ -32,7 +32,7 @@ const ConferencePage = () => {
       </header>
 
       {/* Submit Button */}
-      <Button text="Submit Your Extract" iconLink={<i className="ri-corner-right-down-line"></i>} />
+      <Button text="Submit Your Abstract" iconLink={<i className="ri-corner-right-down-line"></i>} />
 
       {/* Featured Speakers Section */}
       <section className="mt-12 relative z-[100] px-4 w-full max-w-7xl">
