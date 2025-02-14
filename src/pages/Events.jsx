@@ -133,7 +133,7 @@ const Events = () => {
       categories: ["Coding", "Problem Solving"],
       details: {
         venue: "NIT Hamirpur Innovation Center",
-        time: "10:00 AM - 10:00 AM",
+        time: "10:00 AM - 10:00 PM",
         prize: "To Be Revealed Soon",
         teamSize: "2-4 members",
         requirements: ["Laptop with necessary software", "Team registration"],
