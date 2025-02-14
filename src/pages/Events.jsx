@@ -103,7 +103,7 @@ const Events = () => {
     {
       title: "🤖 AI in Robotics Workshop",
       type: "workshop",
-      date: "March XX, 2025",
+      date: "March 24, 2025",
       description: "Explore the integration of AI in modern robotics systems",
       categories: ["Artificial Intelligence", "Robotics", "Machine Learning"],
       details: {
@@ -134,7 +134,7 @@ const Events = () => {
       categories: ["Coding", "Problem Solving"],
       details: {
         venue: "NIT Hamirpur Innovation Center",
-        time: "10:00 AM - 10:00 AM",
+        time: "10:00 AM - 10:00 PM",
         prize: "To Be Announced ",
         teamSize: "2-4 members",
         requirements: ["Laptop with necessary software", "Team registration"],
