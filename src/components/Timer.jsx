@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 const CountdownTimer = () => {
     const calculateTimeLeft = useCallback(() => {
-        const eventDate = new Date('2025-03-15T00:00:00');  // Updated to 2024
+        const eventDate = new Date('2025-03-22T00:00:00');  // Updated to 2024
         const now = new Date();
         const difference = eventDate - now;
 

@@ -23,9 +23,11 @@ const Home = () => {
         <section className='relative w-full lg:min-h-screen min-h-[70vh] flex flex-col justify-center items-center '>
         <img src="https://res.cloudinary.com/dosnuagvu/image/upload/v1738154202/logoRoboweek_ye8gmy.png" alt="" className=' lg:absolute lg:top-[25px] lg:right-[30px] absolute  top-2 p-1 backdrop-blur-sm w-[100px] border border-white/20 rounded-full  lg:scale-100  lg:w-[150px] '/>
         <div className='flex flex-col justify-center items-center space-y-8 gap-205'>
-          <h1 className='relative z-[100] text-white/80 font-squidFont lg:text-[8vw] mt-20 lg:leading-[8vw] leading-[14vw] text-[14vw] text-center '>ROBOWEEK 3.0</h1>
+          <h1 className='relative z-[100] text-white/80 font-squidFont lg:text-[8vw] mt-32 lg:mt-20 lg:leading-[8vw] leading-[14vw] text-[14vw] text-center  '>ROBOWEEK 3.0</h1>
 
-          <h2 className='font-squidFont text-white text-2xl lg:text-3xl'>- - - MYRAID OF iNNOVATION - - -</h2>
+            <h2 className='font-squidFont text-white hidden lg:block text-2xl lg:text-3xl'>- - - MYRAID OF iNNOVATION - - -</h2>
+          <h2 className='font-squidFont text-white lg:hidden text-2xl lg:text-3xl'>MYRAID OF iNNOVATION</h2>
+            
 
             <CountdownTimer />
             <div className="mt-5">
@@ -91,7 +93,7 @@ const Home = () => {
       <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-pink-400/50"></div>
 
       {[
-        { event: "REGISTRATION OPENS", date: "5/02/2025" },
+        { event: "REGISTRATION OPENS", date: "05/02/2025" },
         { event: "TEAM FORMATION DEADLINE", date: "10/03/2025" },
         { event: "EVENT BEGINS", date: "22/03/2025" },
         { event: "DAY 2", date: "23/03/2025" },
