@@ -1,6 +1,6 @@
-import React from 'react';
-import CountdownTimer from '../components/Timer';
-import Button from '../components/Button';
+import React from "react";
+import CountdownTimer from "../components/Timer";
+import Button from "../components/Button";
 
 const speakers = [
   {
@@ -27,12 +27,17 @@ const ConferencePage = () => {
         </h1>
         <CountdownTimer />
         <p className="text-sm md:text-base lg:text-lg text-gray-300 mt-4 font-semibold text-center">
-          Join us for an event featuring top industry professionals, insightful talks, and unparalleled networking opportunities.
+          Join us for an event featuring top industry professionals, insightful
+          talks, and unparalleled networking opportunities.
         </p>
       </header>
 
       {/* Submit Button */}
-      <Button text="Submit Your Abstract" iconLink={<i className="ri-corner-right-down-line"></i>} />
+      <Button
+        text="Participate"
+        iconLink={<i className="ri-corner-right-down-line"></i>}
+        onClick={() => window.open("https://forms.gle/viRFdsJCcwq1BmR6A", "_blank")}
+      />
 
       {/* Featured Speakers Section */}
       <section className="mt-12 relative z-[100] px-4 w-full max-w-7xl">
@@ -40,7 +45,8 @@ const ConferencePage = () => {
           Featured <span className="text-pink-400">Speakers</span>
         </h2>
         <p className="text-sm md:text-base lg:text-lg text-center text-gray-300 mb-8">
-          Stay tuned for the unveiling of our esteemed speakers who will share their expertise on emerging trends and technologies.
+          Stay tuned for the unveiling of our esteemed speakers who will share
+          their expertise on emerging trends and technologies.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
@@ -52,7 +58,9 @@ const ConferencePage = () => {
               <div className="w-full h-40 md:h-48 flex items-center justify-center rounded-lg mb-4 bg-pink-400/10 border border-pink-400/30">
                 <i className="ri-user-3-line text-6xl text-pink-400/50"></i>
               </div>
-              <h2 className="text-lg md:text-xl font-bold text-white">{speaker.name}</h2>
+              <h2 className="text-lg md:text-xl font-bold text-white">
+                {speaker.name}
+              </h2>
               <p className="text-sm md:text-base text-gray-400 mt-2 font-semibold">
                 Details coming soon.
               </p>
@@ -67,7 +75,8 @@ const ConferencePage = () => {
           Workshops & Sessions
         </h2>
         <p className="text-sm md:text-base lg:text-lg text-gray-300 mb-8">
-          Participate in interactive workshops and hear from leading experts in the field.
+          Participate in interactive workshops and hear from leading experts in
+          the field.
         </p>
 
         {/* Glowing Sign */}
