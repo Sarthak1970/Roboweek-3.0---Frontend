@@ -7,7 +7,7 @@ const speakers = [
     name: "Milind Raj",
     designation: "CEO, Roboz.in",
     title:
-      "Aka: 'Drone Man of India'</div>, a title awarded by Dr. A.P.J. Abdul Kalam",
+      "Aka: 'Drone Man of India, a title awarded by Dr. A.P.J. Abdul Kalam",
     image:
       "https://res.cloudinary.com/dosnuagvu/image/upload/v1740043332/WhatsApp_Image_2025-02-19_at_23.24.59_af6ecf16_s7vhyg.jpg",
   },
