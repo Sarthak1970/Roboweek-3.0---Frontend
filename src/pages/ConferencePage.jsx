@@ -74,7 +74,7 @@ const ConferencePage = () => {
                   <img
                     src={speaker.image}
                     alt={speaker.name}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-contain rounded-lg"
                   />
                 ) : (
                   <i className="ri-user-3-line text-6xl text-pink-400/50"></i>
