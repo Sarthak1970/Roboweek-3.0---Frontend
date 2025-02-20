@@ -7,7 +7,7 @@ const speakers = [
     name: "Milind Raj",
     designation: "CEO, Roboz.in",
     title:
-      "Aka: 'Drone Man of India'</div>, a title awarded by Dr. A.P.J. Abdul Kalam",
+      "Aka: 'Drone Man of India, a title awarded by Dr. A.P.J. Abdul Kalam",
     image:
       "https://res.cloudinary.com/dosnuagvu/image/upload/v1740043332/WhatsApp_Image_2025-02-19_at_23.24.59_af6ecf16_s7vhyg.jpg",
   },
@@ -20,7 +20,6 @@ const speakers = [
     name: "To Be Revealed Soon",  
     image:""
   },
-
 ];
 
 const ConferencePage = () => {
@@ -61,10 +60,7 @@ const ConferencePage = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
-          {[
-            ...speakers,
-
-          ].map((speaker, index) => (
+          {speakers.map((speaker, index) => (
             <div
               key={index}
               className="bg-black/70 backdrop-blur-lg border border-gray-600 rounded-xl p-4 md:p-6 text-center transition-transform duration-300 hover:scale-105"
@@ -80,16 +76,16 @@ const ConferencePage = () => {
                   <i className="ri-user-3-line text-6xl text-pink-400/50"></i>
                 )}
               </div>
-              <h2 className="text-lg md:text-xl font-bold text-white">
+              <h2 className={`text-lg md:text-xl font-bold ${speaker.name === "Milind Raj" ? "text-pink-400" : "text-white"}`}>
                 {speaker.name}
               </h2>
               {speaker.designation && (
-                <p className="text-sm md:text-base text-gray-400 mt-2 font-semibold">
+                <p className="text-sm md:text-base text-white mt-2 font-semibold">
                   {speaker.designation}
                 </p>
               )}
               {speaker.title && (
-                <p className="text-xs md:text-sm text-gray-500 mt-1">
+                <p className="text-xs md:text-sm text-white mt-1">
                   {speaker.title}
                 </p>
               )}

@@ -1,12 +1,13 @@
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   const navigation = [
-    { name: 'Home', section:'hero', href: '/Home', icon: 'ri-home-line' },
+    { name: 'Home', section: 'hero', href: '/Home', icon: 'ri-home-line' },
     { name: 'About', href: '/about', icon: 'ri-information-line' },
     { name: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
     { name: 'Team', href: '/team', icon: 'ri-team-line' },
@@ -24,25 +25,26 @@ const Navbar = () => {
         if (contactSection) {
           contactSection.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 100); 
+      }, 100);
     } else {
       const contactSection = document.getElementById('contact');
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    setIsOpen(false); 
+    setIsOpen(false);
   };
 
   const handleNavigation = (href, event) => {
     event.preventDefault();
     navigate(href);
     window.scrollTo(0, 0);
-    setIsOpen(false); 
+    setIsOpen(false);
   };
 
   return (
     <>
+      {/* Desktop Navigation */}
       <nav
         className={`hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 z-[1000] ${isOpen ? 'w-64' : 'w-12'} transition-all duration-500 ease-in-out hover:shadow-lg hover:shadow-pink-500/10`}
         onMouseEnter={() => setIsOpen(true)}
@@ -82,9 +84,27 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Mobile Navigation */}
       <div className="md:hidden fixed top-4 right-4 z-[1000]">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="p-2 rounded-lg bg-black/20 backdrop-blur-lg border border-pink-500/30"
+        >
+          {isOpen ? (
+            <XMarkIcon className="h-6 w-6 text-pink-400" />
+          ) : (
+            <Bars3Icon className="h-6 w-6 text-pink-400" />
+          )}
+        </button>
+
         {isOpen && (
           <div className="fixed inset-0 bg-black/95 backdrop-blur-lg z-[999]">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 p-2 rounded-lg bg-black/20 backdrop-blur-lg border border-pink-500/30 hover:bg-pink-500/10"
+            >
+              <XMarkIcon className="h-6 w-6 text-pink-400" />
+            </button>
             <div className="flex flex-col items-center justify-center h-full space-y-8">
               {navigation.map((item) => (
                 <Link
