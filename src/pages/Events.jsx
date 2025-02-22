@@ -84,7 +84,7 @@ const Events = () => {
       title: "✨ Entrepreneurship Workshop",
       type: "workshop",
 
-      date: "23 March 2024",
+      date: "23 March 2025",
       description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
       categories: ["Coming Soon"],
 
