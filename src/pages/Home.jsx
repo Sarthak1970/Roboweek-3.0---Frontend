@@ -3,18 +3,26 @@ import Button from '../components/Button';
 import CountdownTimer from '../components/Timer';
 import About from './AboutUs';
 import Sponsors from './Sponsors';
-// import Conference from '../components/Conference';
-// import logo from '../assets/Heading.png';
 import Prizes from '../components/Prizes';
 import Contact from '../components/contact'
+import ChatWindow from '../components/ChatWindow';
+import { RiChatSmile2Line } from 'react-icons/ri';
+import { useState } from 'react';
+
+
 
 const Home = () => {
+    const [isChatOpen, setIsChatOpen] = useState(false);
+  
+    const toggleChat = () => {
+      setIsChatOpen(!isChatOpen);
+    };
 
-  const theme = {
-    themeOfEvent: "Rise of the Machines"
-  }
+    const theme = {
+      themeOfEvent: "Rise of the Machines"
+    };
 
-  return (
+    return (
     <div className="min-h-screen overflow-hidden">
 
       {/* Hero Section */}
@@ -153,6 +161,17 @@ const Home = () => {
 
       {/* Conference Section */}
       {/* <Conference /> */}
+
+       {/* Chatbot Icon */}
+       <button
+        onClick={toggleChat}
+        className="fixed bottom-10 right-10 bg-pink-500 p-4 rounded-full shadow-lg hover:bg-pink-400 transition-all duration-300"
+      >
+        <RiChatSmile2Line className="text-white text-2xl" />
+      </button>
+
+      {/* Chat Window */}
+      <ChatWindow isOpen={isChatOpen} onClose={toggleChat} />
     </div>
   );
 };
