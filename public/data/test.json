@@ -235,15 +235,6 @@
         "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085872/IMG-20241231-WA0102_-_Rishabh_Sharma_gezmds.jpg"
     },
     {
-        "Name":"Tanishk Saini",
-        "Post":"Executive",
-        "Techstack":"Front-end Web Developer, AI\/ML",
-        "Github":"https:\/\/github.com\/Tanishksaini123",
-        "Instagram":"https:\/\/www.instagram.com\/tanishksaini1?igsh=YzljYTk1ODg3Zg==",
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/tanishk-saini-154466295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085860/20240318_141736_-_Tanishk_Saini_pcbvbi.jpg"
-    },
-    {
         "Name":"Manya Singh Lalhall",
         "Post":"Executive",
         "Techstack":"SLAM Project & ROS (2023), C++, ML ",
@@ -253,15 +244,6 @@
         "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085869/Screenshot_2023-11-13_at_20.13_-_Manya_-_nmcbwm.jpg"
     },
     {
-        "Name":"Akshat Sharma",
-        "Post":"Executive",
-        "Techstack":"C\/C++,Microcontroller programming,Hardware Integration",
-        "Github":"https:\/\/github.com\/Akshat-Sharma-007",
-        "Instagram":"https:\/\/www.instagram.com\/akshat_shxrma_\/",
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/akshat-sharma-2308382ab\/",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085894/IMG_20240724_114850757_2_-_AKSHAT_SHARMA_uav3z0.jpg"
-    },
-    {
         "Name":"Kartik Sharma",
         "Post":"Executive",
         "Techstack":"Matlab ,Simulink ,python programming , Microcontrollers and hardware ",
@@ -269,15 +251,6 @@
         "Instagram":"sharma_kartik_003",
         "LinkedIn":"https:\/\/www.linkedin.com\/in\/kartik-sharma-15b4b4343",
         "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085877/IMG-20241024-WA0007_-_KARTIK_SHARMA_vvbrq8.jpg"
-    },
-    {
-        "Name":"Shubham Atri ",
-        "Post":"Executive ",
-        "Techstack":"Graphics design,Web designing, Web development, canva ",
-        "Github":"https:\/\/github.com\/atrishubham06",
-        "Instagram":null,
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/shubham-atri-1202392aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085902/IMG_20250102_191819_-_SHUBHAM_ATRI_nbauub.jpg"
     },
     {
         "Name":"Rishabh Sharma ",
@@ -307,24 +280,6 @@
         "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085887/Photo_from_Chirayu_-_CHIRAYU_PANDEY_x0vl6m.jpg"
     },
     {
-        "Name":"Divye Vaibhav ",
-        "Post":"Executive",
-        "Techstack":"AI\/ML, ROS",
-        "Github":"https:\/\/github.com\/divyeeee",
-        "Instagram":"https:\/\/www.instagram.com\/divyemish\/",
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/divye-vaibhav-804572288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085892/IMG-20240215-WA0027_-_DIVYE_VAIBHAV_xeoflv.jpg"
-    },
-    {
-        "Name":"Adarsh Upadhyay ",
-        "Post":"Executive ",
-        "Techstack":"Hardware ,DSA",
-        "Github":"https:\/\/github.com\/adarshupadhyay06",
-        "Instagram":"https:\/\/www.instagram.com\/adarsh_upadhyay06\/",
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/adarsh-upadhyay-10550a280\/",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085848/IMG_20250102_201333_-_adarsh_upadhyay_qch4wn.jpg"
-    },
-    {
         "Name":"Khushi Pandey",
         "Post":"Executive",
         "Techstack":"Web dev, DSA",
@@ -333,26 +288,7 @@
         "LinkedIn":"http://www.linkedin.com/in/khushi-pandey-4a450329b",
         "ProfilePicture":"https://res.cloudinary.com/dlbliivcc/image/upload/v1738686426/Screenshot_2025-01-12_151725_-_Khushi_Pandey_j0tdgt.png"
     },
-    {
-        "Name":"Namish Gupta",
-        "Post":"Executive ",
-        "Techstack":"Hardware,DSA",
-        "Github":"https:\/\/github.com\/namishgupta29",
-        "Instagram":"https:\/\/www.instagram.com\/namish_gupta01\/",
-        "LinkedIn":"www.linkedin.com\/in\/namish-gupta-706449344",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085834/WhatsApp_Image_2025-01-02_at_20.35.28_-_Namish_Gupta_k062bc.jpg"
-    },
-
-    {
-        "Name":"Nikit Bhari",
-        "Post":"Executive",
-        "Techstack":"Deep Learning, DSA",
-        "Github":"https:\/\/github.com\/NikitBhari",
-        "Instagram":"Don't Have a insta id",
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/nikit-bhari-a635972b2",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736085864/IMG-20241110-WA0020_-_Nikit_Bhari_fs8iuv.jpg"
-    },
-    
+        
     {
         "Name":"Areen",
         "Post":"Executive",
@@ -361,15 +297,6 @@
         "Instagram":"https://www.instagram.com/areen9211/profilecard/?igsh=MWhpYnk3aHowdGpxcA==",
         "LinkedIn":"https://www.linkedin.com/in/areen-sharma-4575a82b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1736089142/Screenshot_2025-01-05_202207_erzpp8.png"
-    },
-    {
-        "Name":"Vedansh",
-        "Post":"Executive ",
-        "Techstack":"ROS,Cybsersecurity,WebDevelopment",
-        "Github":"https:\/\/github.com\/vedansh012",
-        "Instagram":"https:\/\/www.instagram.com\/vedansh.0001\/",
-        "LinkedIn":"https:\/\/www.linkedin.com\/in\/vedansh-tyagi-614316293\/",
-        "ProfilePicture":"https://res.cloudinary.com/dosnuagvu/image/upload/v1737217992/WhatsApp_Image_2025-01-14_at_20.35.51_-_Vedansh_Tyagi_nd8fc0.jpg"
     },
     {
         "Name":"Atul Koundal ",
