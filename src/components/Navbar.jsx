@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: 'Events', href: '/events', icon: 'ri-calendar-event-line' },
     { name: 'Team', href: '/team', icon: 'ri-team-line' },
     { name: 'Sponsors', href: '/sponsors', icon: 'ri-money-dollar-circle-line' },
-    { name: 'Conference', href: '/conference', icon: 'ri-slideshow-line' },
+    // { name: 'Conference', href: '/conference', icon: 'ri-slideshow-line' },
     { name: 'Contact', href: '#contact', icon: 'ri-mail-line' },
   ];
 

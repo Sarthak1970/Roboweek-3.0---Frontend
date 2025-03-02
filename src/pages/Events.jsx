@@ -81,7 +81,7 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
-      title: "✨ Entrepreneurship Workshop",
+      title: "Entrepreneurship Workshop",
       type: "workshop",
 
       date: "23 March 2025",
@@ -101,7 +101,7 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
     },
     {
-      title: "🤖 AI in Robotics Workshop",
+      title: " AI in Robotics Workshop",
       type: "workshop",
       date: "March 24, 2025",
       description: "Explore the integration of AI in modern robotics systems",
@@ -127,7 +127,7 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513187/WhatsApp_Image_2025-02-02_at_21.47.24_3c737600_toupm4.jpg'
     },
     {
-      title: "✨ Hackathon",
+      title: " Hackathon",
       type: "Hackathon",
       date: "22 March , 2025",
       description: "24-hour coding marathon to solve real-world problems",
@@ -166,7 +166,7 @@ const EventImageOrPlaceholder = ({ event }) => {
     //   return (
     //     <div className="w-3/4 h-48 mx-auto flex items-center justify-center border-2 border-dashed border-pink-500/50 rounded-xl bg-pink-500/10">
     //       <div className="text-center px-4">
-    //         <p className="text-pink-400 text-xl font-bold mb-2">✨</p>
+    //         <p className="text-pink-400 text-xl font-bold mb-2"></p>
     //         <p className="text-pink-400 font-semibold">Will be revealed soon</p>
     //       </div>
     //     </div>

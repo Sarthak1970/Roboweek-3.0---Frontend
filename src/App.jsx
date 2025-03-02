@@ -7,7 +7,7 @@ import Events from './pages/Events';
 import Team from './pages/Team';
 import Sponsors from './pages/Sponsors';
 import FloatingShape from './components/FloatingShape';
-import ConferencePage from './pages/ConferencePage';
+// import ConferencePage from './pages/ConferencePage';
 import SplashCursor from './blocks/Animations/SplashCursor/SplashCursor.jsx'
 import SquidLoader from './components/Loader.jsx';
 
@@ -45,7 +45,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/ashish" element={<Events />} />
           <Route path="/sponsors" element={<Sponsors />} />
-          <Route path="/conference" element={<ConferencePage />} />
+          {/* <Route path="/conference" element={<ConferencePage />} /> */}
         </Routes>
       </Layout>
     </Router>
