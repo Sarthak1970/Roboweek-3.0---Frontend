@@ -3,11 +3,11 @@ import Button from '../components/Button';
 import CountdownTimer from '../components/Timer';
 import About from './AboutUs';
 import Sponsors from './Sponsors';
-import Prizes from '../components/Prizes';
 import Contact from '../components/contact'
 import ChatWindow from '../components/ChatWindow';
 import { RiChatSmile2Line } from 'react-icons/ri';
 import { useState } from 'react';
+import logo from "../../public/assets/logoRoboWeek.png";  
 
 
 
@@ -29,7 +29,7 @@ const Home = () => {
       <div className="hero">
         
         <section className='relative w-full lg:min-h-screen min-h-[70vh] flex flex-col justify-center items-center '>
-        <img src="https://res.cloudinary.com/dosnuagvu/image/upload/v1738154202/logoRoboweek_ye8gmy.png" alt="" className=' lg:absolute lg:top-[25px] lg:right-[30px] absolute  top-2 p-1 backdrop-blur-sm w-[100px] border border-white/20 rounded-full  lg:scale-100  lg:w-[150px] '/>
+        <img src={logo} alt="" className=' lg:absolute lg:top-[25px] lg:right-[30px] absolute  top-2 p-1 backdrop-blur-sm w-[100px] border border-white/20 rounded-full  lg:scale-100  lg:w-[150px] '/>
         <div className='flex flex-col justify-center items-center space-y-8 gap-205'>
           <h1 className='relative z-[100] text-white/80 font-squidFont lg:text-[8vw] mt-32 lg:mt-20 lg:leading-[8vw] leading-[14vw] text-[14vw] text-center  '>ROBOWEEK 3.0</h1>
 
