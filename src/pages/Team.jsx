@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import teamData from '../../public/data/test.json';  
-import Button from '../components/Button';
+// import Button from '../components/Button';
 
 const Team = () => {
   return (
