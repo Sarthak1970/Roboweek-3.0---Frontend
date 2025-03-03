@@ -35,7 +35,7 @@ const Team = () => {
                     className="w-full h-3/4 object-contain rounded-2xl  p-5 object-center"
                   />
                   <div className="p-4 text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">{member.Name.toUpperCase()}</h3>
+                    <h3 className="text-sm font-bold text-white mb-2">{member.Name.toUpperCase()}</h3>
                     <div className="text-pink-400 font-semibold">{member.Post.toUpperCase()}</div>
                   </div>
                 </div>
