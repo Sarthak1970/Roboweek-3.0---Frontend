@@ -81,7 +81,7 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
     },
     {
-      title: "Entrepreneurship Workshop",
+      title: "Startup Spark:Entrepreneurship Workshop",
       type: "workshop",
 
       date: "23 March 2025",
@@ -101,7 +101,7 @@ const Events = () => {
       image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
     },
     {
-      title: " AI in Robotics Workshop",
+      title: "Code,Build,Innovate : AI in Robotics Workshop",
       type: "workshop",
       date: "March 24, 2025",
       description: "Explore the integration of AI in modern robotics systems",
