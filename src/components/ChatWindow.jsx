@@ -10,6 +10,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
   const chatWindowRef = useRef(null);
   const messagesEndRef = useRef(null);
   const dragControls = useDragControls();
+  const [displayedMessages, setDisplayedMessages] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,6 +47,49 @@ const ChatWindow = ({ isOpen, onClose }) => {
     return () => chatWindowRef.current?.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (messages.length > displayedMessages.length) {
+      const newMessage = messages[messages.length - 1];
+      
+      if (newMessage.isLoading) {
+        setDisplayedMessages(prev => [...prev, '...']);
+        return;
+      }
+
+      let i = 0;
+      const fullText = newMessage.content;
+      const interval = setInterval(() => {
+        setDisplayedMessages(prev => {
+          const newDisplayed = [...prev];
+          newDisplayed[messages.length - 1] = fullText.slice(0, i + 1);
+          return newDisplayed;
+        });
+        i++;
+        if (i >= fullText.length) {
+          clearInterval(interval);
+        }
+      }, 30);
+    } else if (messages.length > 0 && messages[messages.length - 1].isLoading === false) {
+      // Update loading state to final content
+      const lastMessage = messages[messages.length - 1];
+      if (displayedMessages[messages.length - 1] === '...' && lastMessage.content) {
+        let i = 0;
+        const fullText = lastMessage.content;
+        const interval = setInterval(() => {
+          setDisplayedMessages(prev => {
+            const newDisplayed = [...prev];
+            newDisplayed[messages.length - 1] = fullText.slice(0, i + 1);
+            return newDisplayed;
+          });
+          i++;
+          if (i >= fullText.length) {
+            clearInterval(interval);
+          }
+        }, 35);
+      }
+    }
+  }, [messages]);
+
   const sendMessage = async () => {
     if (!input.trim()) return;
     
@@ -53,6 +97,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
     const tempBotMessage = { role: 'bot', content: '', isLoading: true, avatar: '🤖' };
 
     setMessages(prev => [...prev, userMessage, tempBotMessage]);
+    setDisplayedMessages(prev => [...prev, input]); // Add user message immediately
     setInput('');
     setIsReading(false);
 
@@ -104,7 +149,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
       style={{
         width: dimensions.width,
         height: dimensions.height,
-        bottom: isMobile ? '15%' : '80px',  // Moved above the chatbot icon
+        bottom: isMobile ? '15%' : '80px',
         right: isMobile ? '50%' : '20px',
         transform: isMobile ? 'translateX(50%)' : 'none',
       }}
@@ -126,7 +171,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
             <div className={`flex gap-2 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center">{msg.avatar}</div>
               <div className="p-2 rounded-lg bg-pink-400/20 text-white">
-                {msg.isLoading ? '...' : msg.content}
+                {displayedMessages[index] || (msg.isLoading ? '...' : '')}
               </div>
             </div>
           </div>
