@@ -26,7 +26,7 @@ const Events = () => {
       rulebookLink: "https://drive.google.com/drive/folders/1BxCL5Tadqcz3WvZwQ1zL1KL5UeTfo2ih",
       registrationLink: "https://unstop.com/p/pathfinder-roboweek-30-nit-hamirpur-1386628",
 
-      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154215/pathfinder_dec5zk.png', 
+      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289828/pathfinder_kuj5m1.png', 
     },
     {
       title: "Bowl Bot Derby",
@@ -44,7 +44,7 @@ const Events = () => {
       rulebookLink: "https://drive.google.com/drive/folders/1_aFeMecD8tPNR3tOXLIyzeLQKYKs17GL",
       registrationLink: "https://unstop.com/competitions/bowl-the-bot-roboweek-30-nit-hamirpur-1386663",
 
-      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154212/BowlBotDerby_zhwklt.png', 
+      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.34_AM_d0pdpl.jpg', 
     },
     {
       title: "MECHA MAYHEM",
@@ -60,7 +60,7 @@ const Events = () => {
       },      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
       registrationLink: "https://unstop.com/competitions/mecha-mayem-roboweek-30-nit-hamirpur-1387699",
     
-      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154205/MECHA_MAYHEM_1_hevnpv.png',
+      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.33_AM_1_pmceye.jpg',
     },
     {
       title: "SPECTRUM SPRINT",
@@ -78,7 +78,7 @@ const Events = () => {
       rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
       registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
 
-      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738154216/2_bstjsa.png', 
+      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.33_AM_ez30ot.jpg', 
     },
     {
       title: "Startup Spark:Entrepreneurship Workshop",
