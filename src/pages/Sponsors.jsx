@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import Button from "../components/Button";
-import HoverRobotix from "../assets/SponsersLogo/hoverRobotix.png";
-import MentorX from "../assets/SponsersLogo/MentorX.png";
-import RevUp from "../assets/SponsersLogo/RevUP.webp";
-import EasemyTrip from "../assets/SponsersLogo/EasemyTrip.png";
-import LUCR8 from "../assets/SponsersLogo/LUCR8.jpeg";
-import Unstop from "../assets/SponsersLogo/Unstop.svg";
+import HoverRobotix from "../assets/sponserslogo/hoverrobotix.png";
+import MentorX from "../assets/sponserslogo/mentorx.png";
+import RevUp from "../assets/sponserslogo/revup.webp";
+import EasemyTrip from "../assets/sponserslogo/easemytrip.png";
+import LUCR8 from "../assets/sponserslogo/lucr8.jpeg";
+import Unstop from "../assets/sponserslogo/unstop.svg";
 
 const Sponsors = () => {
   const sponsorTiers = [
