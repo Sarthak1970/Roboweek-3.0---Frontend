@@ -2,7 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 // import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
-import { h1 } from 'framer-motion/client';
+import spectrum from "../assets/Events/Spectrum.jpg"
+import StartupWorkshop from "../assets/Events/StartupWorkshop.jpg"
+import AIWorkshop from "../assets/Events/AIWorkshop.jpg"
+import Hackathon from "../assets/Events/Hackathon.jpg"
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -78,7 +81,7 @@ const Events = () => {
       rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
       registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
 
-      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.33_AM_ez30ot.jpg', 
+      image: spectrum, 
     },
     {
       title: "Startup Spark:Entrepreneurship Workshop",
@@ -98,7 +101,7 @@ const Events = () => {
       },
       rulebookLink: "https://roboweek.com/rulebook/entrepreneurship",
       registrationLink: "https://unstop.com/p/entrepreneurship-of-golden-era-of-startups-roboweek-30-nit-hamirpur-1389226",
-      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513188/IMG_7732_pwb5sv.png'
+      image: StartupWorkshop
     },
     {
       title: "Code,Build,Innovate : AI in Robotics Workshop",
@@ -124,7 +127,7 @@ const Events = () => {
       },
       rulebookLink: "https://roboweek.com/rulebook/ai-robotics",
       registrationLink: "https://unstop.com/p/ai-in-robotics-roboweek-30-nit-hamirpur-1389217",
-      image: 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738513187/WhatsApp_Image_2025-02-02_at_21.47.24_3c737600_toupm4.jpg'
+      image: AIWorkshop
     },
     {
       title: " Hackathon",
@@ -142,7 +145,7 @@ const Events = () => {
       },
       rulebookLink: "https://drive.google.com/file/d/1_PLHCiWBHkv0EsEHyrqaVp28El1oKYV8/view?usp=sharing",
       registrationLink: "https://unstop.com/hackathons/hackathon-roboweek-30-nit-hamirpur-1387760",
-      image : 'https://res.cloudinary.com/dosnuagvu/image/upload/v1738609786/WhatsApp_Image_2025-02-04_at_00.38.15_d56f3b26_avnpo1.jpg'
+      image : Hackathon
     }
   ];
     
