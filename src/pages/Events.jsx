@@ -2,10 +2,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 // import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
-import spectrum from "../assets/Events/Spectrum.jpg"
-import StartupWorkshop from "../assets/Events/StartupWorkshop.jpg"
-import AIWorkshop from "../assets/Events/AIWorkshop.jpg"
-import Hackathon from "../assets/Events/Hackathon.jpg"
+import spectrum from "/assets/Events/Spectrum.jpg"
+import StartupWorkshop from "/assets/Events/StartupWorkshop.jpg"
+import AIWorkshop from "/assets/Events/AIWorkshop.jpg"
+import Hackathon from "/assets/Events/Hackathon.jpg"
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);

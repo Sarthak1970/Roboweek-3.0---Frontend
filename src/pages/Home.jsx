@@ -7,7 +7,7 @@ import Contact from '../components/contact'
 import ChatWindow from '../components/ChatWindow';
 import { RiChatSmile2Line } from 'react-icons/ri';
 import { useState } from 'react';
-import RoboweekLogo from '../assets/roboweeklogo.png'; 
+import RoboweekLogo from '../../public/assets/roboweeklogo.png'; 
 
 
 
