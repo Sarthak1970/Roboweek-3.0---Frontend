@@ -145,7 +145,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
   return (
     <motion.div
       ref={chatWindowRef}
-      className="fixed bg-black/80 backdrop-blur-lg border border-pink-500 rounded-lg shadow-lg flex flex-col z-[9999]"
+      className="fixed  bg-black/80 backdrop-blur-lg border border-pink-500 rounded-lg shadow-lg flex flex-col z-[1500q]"
       style={{
         width: dimensions.width,
         height: dimensions.height,

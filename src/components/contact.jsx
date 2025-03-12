@@ -87,8 +87,8 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-pink-400 font-squidFont">Chat with us</h3>
                 <p className="text-gray-300 mt-2">Our robot team is ready to assist.</p>
                 <div className="space-y-2 mt-3">
-                  <a href="mailto:robonith@nith.ac.in" className="text-pink-400 hover:text-pink-300 block">
-                    robonith@nith.ac.in
+                  <a href="mailto:roboweek3.0@gmail.com" className="text-pink-400 hover:text-pink-300 block">
+                  roboweek3.0@gmail.com
                   </a>
                   <div className="text-gray-300">
                     <p>MILIND GUPTA: <a href="tel:+918957895881" className="text-pink-400 hover:text-pink-300">+91 8957895881</a></p>

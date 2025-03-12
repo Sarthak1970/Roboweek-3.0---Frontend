@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import Button from "../components/Button";
+import HoverRobotix from "../assets/SponsersLogo/hoverRobotix.png";
+import MentorX from "../assets/SponsersLogo/MentorX.png";
+import RevUp from "../assets/SponsersLogo/RevUP.webp";
+import EasemyTrip from "../assets/SponsersLogo/EasemyTrip.png";
+import LUCR8 from "../assets/SponsersLogo/LUCR8.jpeg";
+import Unstop from "../assets/SponsersLogo/Unstop.svg";
 
 const Sponsors = () => {
   const sponsorTiers = [
@@ -8,7 +14,7 @@ const Sponsors = () => {
       sponsors: [
         {
           name: "hoverRobotix",
-          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514987/hoverrobo_aw0c7w.png",
+          logo: HoverRobotix,
         },
       ],
     },
@@ -17,7 +23,7 @@ const Sponsors = () => {
       sponsors: [
         {
           name: "MentorX",
-          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514643/MENTORx_Logo_png_qmoqlm.png",
+          logo: MentorX,
         },
       ],
     },
@@ -26,11 +32,11 @@ const Sponsors = () => {
       sponsors: [
         {
           name: "RevUp",
-          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514640/RevUp_Logo_png_clean1_urkv9w.png",
+          logo: RevUp,
         },
         {
           name: "LUCR8",
-          logo: "https://res.cloudinary.com/dosnuagvu/image/upload/v1738514639/Lucr8_Ventures_Logo_png_jgz8s3.jpg",
+          logo: LUCR8,
         },
       ],
     },
@@ -39,7 +45,16 @@ const Sponsors = () => {
       sponsors: [
         {
           name: "unstop",
-          logo: "https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/svg/unstop-logo.svg",
+          logo: Unstop,
+        },
+      ],
+    },
+    {
+      tier: "Travel Partner",
+      sponsors: [
+        {
+          name: "EasemyTrip",
+          logo: EasemyTrip,
         },
       ],
     },
