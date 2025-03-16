@@ -6,6 +6,8 @@ import spectrum from "/assets/Events/Spectrum.jpg"
 import StartupWorkshop from "/assets/Events/StartupWorkshop.jpg"
 import AIWorkshop from "/assets/Events/AIWorkshop.jpg"
 import Hackathon from "/assets/Events/Hackathon.jpg"
+import Trade from "/assets/Events/tradevortex.png"
+import TradeRuleBook from "/assets/Events/PathFinder.pdf"
 
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -13,6 +15,7 @@ const Events = () => {
   // const { user } = useAuth() || {};
 
   const events = [
+   
     {
       title: "PathFinder",
       type: "competition",
@@ -21,7 +24,7 @@ const Events = () => {
       categories: ["requirments 1", "requirments 2", "requirments 3"],
       details: {
         venue: "NIT Hamirpur",
-        time: "4:00 PM  - 6:00 PM",
+        time: "9:35 AM  - 3:25 PM",
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
@@ -146,7 +149,23 @@ const Events = () => {
       rulebookLink: "https://drive.google.com/file/d/1_PLHCiWBHkv0EsEHyrqaVp28El1oKYV8/view?usp=sharing",
       registrationLink: "https://unstop.com/hackathons/hackathon-roboweek-30-nit-hamirpur-1387760",
       image : Hackathon
-    }
+    }, {
+      title: "Trade Vortex",
+      type: "competition",
+      date: "Mar 24, 2025",
+      description: "Get Ready to become the next Big Bull !",
+      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      details: {
+        venue: "NIT Hamirpur",
+        time: "9:00 AM - 12:00 PM",
+        prize: " To Be Revealed Soon",
+        teamSize: "1-4 members",
+      },
+      rulebookLink: TradeRuleBook,
+      registrationLink: "<<https://community.stockgro.club/form/02c6782eefef-4acb-a2e2-0c63f1967525>>",
+
+      image: Trade, 
+    },
   ];
     
   const categories = [
