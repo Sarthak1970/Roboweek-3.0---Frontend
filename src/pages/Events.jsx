@@ -7,8 +7,7 @@ import StartupWorkshop from "/assets/Events/StartupWorkshop.jpg"
 import AIWorkshop from "/assets/Events/AIWorkshop.jpg"
 import Hackathon from "/assets/Events/Hackathon.jpg"
 import Trade from "/assets/Events/tradevortex.png"
-import TradeRuleBook from "/assets/Events/PathFinder.pdf"
-
+import TradeRuleBook from "/assets/Events/Trade_Vortex.pdf"
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -104,6 +103,7 @@ const Events = () => {
       categories: ["requirements 1", "requirements 2", "requirements 3"],
       details: {
         venue: "NIT Hamirpur",
+
         time: "9:00 AM - 12:00 PM",
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
