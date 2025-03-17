@@ -14,158 +14,121 @@ const Events = () => {
   // const { user } = useAuth() || {};
 
   const events = [
-   
     {
       title: "PathFinder",
       type: "competition",
       date: "Mar 22, 2025",
-      description: "Driven By code, Guided By Lines !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      description: "Driven By code, Guided By Lines!",
+      categories: ["requirements 1", "requirements 2", "requirements 3"],
       details: {
         venue: "NIT Hamirpur",
-        time: "9:35 AM  - 3:25 PM",
+        time: "9:35 AM - 3:25 PM",
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-
       rulebookLink: "https://drive.google.com/drive/folders/1BxCL5Tadqcz3WvZwQ1zL1KL5UeTfo2ih",
       registrationLink: "https://unstop.com/p/pathfinder-roboweek-30-nit-hamirpur-1386628",
-
-      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289828/pathfinder_kuj5m1.png', 
+      image: "https://res.cloudinary.com/dlbliivcc/image/upload/v1741289828/pathfinder_kuj5m1.png",
     },
     {
       title: "Bowl Bot Derby",
       type: "competition",
       date: "Mar 23, 2025",
-      description: "BALANCE . NAVIGATE . BOWL TO WIN !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      description: "BALANCE. NAVIGATE. BOWL TO WIN!",
+      categories: ["requirements 1", "requirements 2", "requirements 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: " To Be Revealed Soon",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-
       rulebookLink: "https://drive.google.com/drive/folders/1_aFeMecD8tPNR3tOXLIyzeLQKYKs17GL",
       registrationLink: "https://unstop.com/competitions/bowl-the-bot-roboweek-30-nit-hamirpur-1386663",
-
-      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.34_AM_d0pdpl.jpg', 
+      image: "https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.34_AM_d0pdpl.jpg",
     },
     {
       title: "MECHA MAYHEM",
       type: "competition",
       date: "Mar 22, 2025",
-      description: "BOOK YOUR TICKET TO THE FUTURE !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      description: "BOOK YOUR TICKET TO THE FUTURE!",
+      categories: ["requirements 1", "requirements 2", "requirements 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "2:00 PM - 4:00 PM",
         prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
-      },      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
-      registrationLink: "https://unstop.com/competitions/mecha-mayem-roboweek-30-nit-hamirpur-1387699",
-    
-      image: 'https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.33_AM_1_pmceye.jpg',
+      },
+      rulebookLink: "https://drive.google.com/drive/folders/1WEZN5u2NeMCgfxDnXiseWZcExQbcxbRM",
+      registrationLink: "https://unstop.com/competitions/mecha-mayhem-roboweek-30-nit-hamirpur-1387699",
+      image: "https://res.cloudinary.com/dlbliivcc/image/upload/v1741289827/WhatsApp_Image_2025-03-07_at_1.05.33_AM_1_pmceye.jpg",
     },
     {
       title: "SPECTRUM SPRINT",
       type: "competition",
       date: "Mar 24, 2025",
-      description: "CATCH THE RAINBOW !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      description: "CATCH THE RAINBOW!",
+      categories: ["requirements 1", "requirements 2", "requirements 3"],
       details: {
         venue: "NIT Hamirpur",
         time: "9:00 AM - 12:00 PM",
-        prize: "To be announced",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
-
       rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
-      registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
-
-      image: spectrum, 
+      registrationLink: "https://unstop.com/p/spectrum-sprint-roboweek-30-nit-hamirpur-1386660",
+      image: spectrum,
     },
+   
     {
-      title: "Startup Spark:Entrepreneurship Workshop",
-      type: "workshop",
-
-      date: "23 March 2025",
-      description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
-      categories: ["Coming Soon"],
-
-      details: {
-        venue: "NIT Hamirpur Seminar Hall",
-        time: "9:00 AM - 12:00 PM",
-        prize: "To be announced",
-        teamSize: "1-3 members",
-        requirements: ["Laptop", "Business idea pitch deck (optional)"],
-        rules: ["Registration required", "Professional attire", "No recording allowed"]
-      },
-      rulebookLink: "https://roboweek.com/rulebook/entrepreneurship",
-      registrationLink: "https://unstop.com/p/entrepreneurship-of-golden-era-of-startups-roboweek-30-nit-hamirpur-1389226",
-      image: StartupWorkshop
-    },
-    {
-      title: "Code,Build,Innovate : AI in Robotics Workshop",
-      type: "workshop",
-      date: "March 24, 2025",
-      description: "Explore the integration of AI in modern robotics systems",
-      categories: ["Artificial Intelligence", "Robotics", "Machine Learning"],
-      details: {
-        venue: "NIT Hamirpur Robotics Lab",
-        time: "10:00 AM - 1:00 PM",
-        prize: "To be announced",
-        teamSize: "1-2 members",
-        requirements: [
-          "Basic Python programming knowledge",
-          "Laptop with Python installed",
-          "Interest in robotics and AI"
-        ],
-        rules: [
-          "Pre-registration mandatory",
-          "Follow lab safety guidelines",
-          "No plagiarism in project work"
-        ]
-      },
-      rulebookLink: "https://roboweek.com/rulebook/ai-robotics",
-      registrationLink: "https://unstop.com/p/ai-in-robotics-roboweek-30-nit-hamirpur-1389217",
-      image: AIWorkshop
-    },
-    {
-      title: " Hackathon",
-      type: "Hackathon",
-      date: "22 March , 2025",
+      title: "Hackathon",
+      type: "hackathon",
+      date: "22 March, 2025",
       description: "24-hour coding marathon to solve real-world problems",
       categories: ["Coding", "Problem Solving"],
       details: {
         venue: "NIT Hamirpur Innovation Center",
         time: "10:00 AM - 10:00 PM",
-        prize: "To Be Announced ",
+        prize: "To Be Announced",
         teamSize: "2-4 members",
-        requirements: ["Laptop with necessary software", "Team registration"],
-        rules: ["Original work only", "No pre-built solutions", "Follow code of conduct"]
       },
       rulebookLink: "https://drive.google.com/file/d/1_PLHCiWBHkv0EsEHyrqaVp28El1oKYV8/view?usp=sharing",
       registrationLink: "https://unstop.com/hackathons/hackathon-roboweek-30-nit-hamirpur-1387760",
-      image : Hackathon
-    }, {
+      image: Hackathon,
+    },
+    {
       title: "Trade Vortex",
       type: "competition",
       date: "Mar 24, 2025",
-      description: "Get Ready to become the next Big Bull !",
-      categories: ["requirments 1", "requirments 2", "requirments 3"],
+      description: "Get Ready to become the next Big Bull!",
+      categories: ["requirements 1", "requirements 2", "requirements 3"],
       details: {
         venue: "NIT Hamirpur",
-        time: "9:35 AM - 3:25 PM",
-        prize: " To Be Revealed Soon",
+
+        time: "9:00 AM - 12:00 PM",
+        prize: "To Be Revealed Soon",
         teamSize: "1-4 members",
       },
       rulebookLink: TradeRuleBook,
+      registrationLink: "https://community.stockgro.club/form/02c6782eefef-4acb-a2e2-0c63f1967525",
+      image: Trade,
+    },
+    {
+      title: "Workshop - Details Coming Soon",
+      type: "workshop",
+      date: "To Be Revealed Soon",
+      description: "Exciting details about this workshop will be shared soon. Stay tuned for updates!",
+      categories: ["Coming Soon"],
+      details: {
+        venue: "To Be Revealed Soon",
+        time: "To Be Revealed Soon",
+        prize: "To Be Revealed Soon",
+        teamSize: "To Be Revealed Soon",
+      },
+      image: "To Be Revealed Soon",
       registrationLink: "https://community.stockgro.club/form/02c6782e-efef-4acb-a2e2-0c63f1967525",
-
-      image: Trade, 
     },
   ];
+  
     
   const categories = [
     { id: 'all', label: 'All Events' },
@@ -194,7 +157,13 @@ const EventImageOrPlaceholder = ({ event }) => {
     //   );
     // }
     
-    return event.image ? (
+    return event.image === "To Be Revealed Soon" ? (
+      <div className="w-3/4 h-48 mx-auto flex items-center justify-center border-2 border-dashed border-pink-500/50 rounded-xl bg-pink-500/10">
+        <div className="text-center px-4">
+          <p className="text-pink-400 text-xl font-bold mb-2">To Be Revealed Soon</p>
+        </div>
+      </div>
+    ) : event.image ? (
       <img 
         src={event.image} 
         alt={event.title} 
