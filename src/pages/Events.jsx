@@ -7,7 +7,7 @@ import StartupWorkshop from "/assets/Events/StartupWorkshop.jpg"
 import AIWorkshop from "/assets/Events/AIWorkshop.jpg"
 import Hackathon from "/assets/Events/Hackathon.jpg"
 import Trade from "/assets/Events/tradevortex.png"
-import TradeRuleBook from "/assets/Events/Trade_Vortex.pdf"
+import TradeRuleBook from "/assets/Events/TradeVortex.pdf"
 const Events = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -104,12 +104,12 @@ const Events = () => {
       details: {
         venue: "NIT Hamirpur",
 
-        time: "9:00 AM - 12:00 PM",
+        time: "9:35 AM - 3:25 PM",
         prize: "To Be Revealed Soon",
-        teamSize: "1-4 members",
+        teamSize: "1 member",
       },
       rulebookLink: TradeRuleBook,
-      registrationLink: "https://community.stockgro.club/form/02c6782eefef-4acb-a2e2-0c63f1967525",
+      registrationLink: "https://community.stockgro.club/form/02c6782e-efef-4acb-a2e2-0c63f1967525",
       image: Trade,
     },
     {
