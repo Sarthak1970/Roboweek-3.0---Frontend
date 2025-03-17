@@ -162,7 +162,7 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: TradeRuleBook,
-      registrationLink: "<<https://community.stockgro.club/form/02c6782eefef-4acb-a2e2-0c63f1967525>>",
+      registrationLink: "https://community.stockgro.club/form/02c6782e-efef-4acb-a2e2-0c63f1967525",
 
       image: Trade, 
     },
