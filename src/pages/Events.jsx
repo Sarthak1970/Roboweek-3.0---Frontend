@@ -76,13 +76,13 @@ const Events = () => {
         teamSize: "1-4 members",
       },
       rulebookLink: "https://drive.google.com/drive/folders/1HjNUSyh1WqEV9kBBSodn7lJXke0BaGCA",
-      registrationLink: "https://unstop.com/p/mecha-mayhem-roboweek-30-nit-hamirpur-1386660",
+      registrationLink: "https://unstop.com/p/spectrum-sprint-roboweek-30-nit-hamirpur-1386660",
       image: spectrum,
     },
    
     {
       title: "Hackathon",
-      type: "Hackathon",
+      type: "hackathon",
       date: "22 March, 2025",
       description: "24-hour coding marathon to solve real-world problems",
       categories: ["Coding", "Problem Solving"],
@@ -124,9 +124,8 @@ const Events = () => {
         prize: "To Be Revealed Soon",
         teamSize: "To Be Revealed Soon",
       },
-      rulebookLink: "#",
-      registrationLink: "#",
       image: "To Be Revealed Soon",
+      registrationLink: "https://community.stockgro.club/form/02c6782e-efef-4acb-a2e2-0c63f1967525",
     },
   ];
   
