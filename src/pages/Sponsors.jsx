@@ -7,6 +7,7 @@ import EasemyTrip from "/assets/sponserslogo/easemytrip.png";
 import LUCR8 from "/assets/sponserslogo/lucr8.jpeg";
 import Unstop from "/assets/sponserslogo/unstop.svg";
 import stockgro from "/assets/sponserslogo/stockgro.svg";
+import Neugence from "/assets/sponserslogo/neugence_logo.jpg";
 
 const Sponsors = () => {
   const sponsorTiers = [
@@ -68,7 +69,15 @@ const Sponsors = () => {
         },
       ],
     },
-    
+    {
+      tier: "Upskilling Partner",
+      sponsors: [
+        {
+          name: "Neugence",
+          logo: Neugence,
+        },
+      ],
+    },
   ];
 
   const handleSponsorClick = () => {
