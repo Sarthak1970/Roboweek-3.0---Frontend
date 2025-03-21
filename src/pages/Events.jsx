@@ -81,7 +81,7 @@ const Events = () => {
    
     {
       title: "Hackathon",
-      type: "hackathon",
+      type: "Hackathon",
       date: "22 March, 2025",
       description: "24-hour coding marathon to solve real-world problems",
       categories: ["Coding", "Problem Solving"],
