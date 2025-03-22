@@ -69,15 +69,15 @@ const Sponsors = () => {
         },
       ],
     },
-    {
-      tier: "Upskilling Partner",
-      sponsors: [
-        {
-          name: "Neugence",
-          logo: Neugence,
-        },
-      ],
-    },
+    // {
+    //   tier: "Upskilling Partner",
+    //   sponsors: [
+    //     {
+    //       name: "Neugence",
+    //       logo: Neugence,
+    //     },
+    //   ],
+    // },
   ];
 
   const handleSponsorClick = () => {
